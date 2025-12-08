@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luxury Perfume</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/fonts/font.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <button class="website-btn">
+        <a href="http://www.jscentique.com" target="_blank">www.jscentique.com</a>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="pages/best-seller.html" class="nav-link">Best Seller</a>
+        </li>
+        <li class="nav-item">
+          <a href="#newarrivals" class="nav-link">New Arrivals</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+      </ul>
+      <!-- Hamburger Menu -->
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <ul class="nav-menu-mobile" id="navMenuMobile">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="pages/best-seller.html" class="nav-link">Best Seller</a>
+      </li>
+      <li class="nav-item">
+        <a href="#newarrivals" class="nav-link">New Arrivals</a>
+      </li>
+      <li class="nav-item">
+        <a href="#about" class="nav-link">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <div class="hero-text">
+      <h1>J SCENTIQUE</h1>
+      <p>Where elegance meets timeless fragrance..</p>
+      <!-- Full line border button with arrow -->
+      <a href="#newarrivals" class="hero-btn">Check New Arrivals →</a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 40px;
+    border: 2px solid #fff; /* full rectangle border */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .hero-btn:hover {
+    background: rgba(255,255,255,0.1); /* subtle hover effect */
+    border-color: #d4af37; /* optional gold on hover */
+    color: #fff;
+  }
+</style>
+
+
+  
+  <!-- SECOND SECTION -->
+  <section class="video-section" id="bestseller">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="assets/videos/vid.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay">
+      <h2 class="video-text">Coming soon</h2>
+    </div>
+  </section>
+
+  <!-- THIRD SECTION -->
+  <section class="third-section" id="about">
+    <div class="third-content">
+      <div class="third-top-left">
+        <h2>Our Perfume Legacy</h2>
+        <p>Discover the art of fragrance. Each bottle tells a story of elegance, passion, and timeless beauty.</p>
+      </div>
+      
+      <div class="third-top-right">
+        <div class="image-right-top">
+          <img src="assets/images/b.png" alt="Perfume Top">
+        </div>
+      </div>
+
+      <div class="third-bottom-left">
+        <div class="image-left-bottom">
+          <img src="assets/images/a.png" alt="Perfume Bottom">
+        </div>
+      </div>
+
+      <div class="third-bottom-right">
+        <h3>Exquisite Craftsmanship</h3>
+        <p>Each fragrance is meticulously blended with the finest ingredients sourced from across the globe. Our master perfumers bring decades of expertise to create unforgettable scents that captivate the senses.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+<script>
+  // Hamburger Menu Toggle
+  const hamburger = document.getElementById('hamburger');
+  const navMenuMobile = document.getElementById('navMenuMobile');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenuMobile.classList.toggle('active');
+  });
+
+  // Close mobile menu when a link is clicked
+  const mobileLinks = navMenuMobile.querySelectorAll('.nav-link');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenuMobile.classList.remove('active');
+    });
+  });
+</script>

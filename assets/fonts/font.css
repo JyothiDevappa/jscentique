@@ -1,0 +1,14 @@
+/* Custom Font Definition */
+@font-face {
+    font-family: 'Mindway';
+    src: url('../fonts/Mindway.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Milven';
+    src: url('../fonts/Milven-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Perfume</title>
+
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/fonts/font.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        @import url(assets/fonts/font.css);
+
+        .best-seller-section {
+            width: 100%;
+            height: 100vh;
+            background: url('../assets/images/brown.png') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center; /* vertical center */
+            padding-left: 80px; /* left side */
+            justify-content: space-between;
+            padding-right: 80px;
+        }
+
+       
+        /* LEFT SIDE MIDDLE CONTENT */
+        .best-seller-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            max-width: 500px;
+        }
+
+        .best-seller-title {
+            font-size: 4rem;
+            letter-spacing: 15px;
+            font-weight: 100;
+            margin-bottom: 10px;
+
+            font-family: 'Milven', serif;
+
+
+        }
+
+        .best-seller-desc {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+            color: rgb(245, 190, 224);
+            letter-spacing: 6px;
+
+            max-width: 400px;
+
+        }
+
+        .shop-btn {
+
+            border: 1px solid #c9789d;
+            padding: 10px 28px;
+            background: transparent;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .shop-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* RIGHT SIDE HERO GRID */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 300px);
+            gap: 20px;
+            z-index: 2;
+            position: relative;
+            margin-top: 80px;
+        }
+
+        .hero-grid-item {
+            width: 300px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-grid-item:hover {
+            transform: scale(1.08);
+        }
+
+        .hero-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Grid positioning - 2 in first row, 1 centered in second */
+        .hero-grid-item:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .hero-grid-item:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .hero-grid-item:nth-child(3) {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        /* PRODUCT SECTION */
+        .product-section {
+            width: 100%;
+            padding: 80px 80px;
+            background: #fafafa;
+        }
+
+        .product-section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .product-section-title {
+            font-size: 3rem;
+            letter-spacing: 10px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            font-family: 'Milven', serif;
+            color: #333;
+        }
+
+        .product-section-desc {
+            font-size: 1.1rem;
+            color: #666;
+            letter-spacing: 2px;
+            font-family: Cambria, Cochin, Georgia, Times, serif;
+            margin-bottom: 10px;
+        }
+
+        .product-section-subtitle {
+            font-size: 0.95rem;
+            color: #999;
+            letter-spacing: 3px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* PRODUCT GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            color: #c9789d;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .add-to-cart-btn {
+            width: 100%;
+            padding: 12px 0;
+            border: 2px solid #333;
+            background: transparent;
+            color: #333;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .add-to-cart-btn:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        /* CART SIDEBAR */
+        .cart-sidebar {
+            position: fixed;
+            right: -450px;
+            top: 0;
+            width: 450px;
+            height: 100vh;
+            background: #fff;
+            box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #333;
+        }
+
+        .cart-close {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+            border: none;
+            background: none;
+            transition: color 0.3s ease;
+        }
+
+        .cart-close:hover {
+            color: #333;
+        }
+
+        .cart-items {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item-image {
+            width: 100px;
+            height: 120px;
+            border-radius: 6px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .cart-item-price {
+            font-size: 1rem;
+            color: #c9789d;
+            font-weight: 700;
+        }
+
+        .cart-footer {
+            padding: 25px;
+            border-top: 1px solid #eee;
+        }
+
+        .view-cart-btn {
+            width: 100%;
+            padding: 15px;
+            background: #333;
+            color: #fff;
+            border: none;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .view-cart-btn:hover {
+            background: #c9789d;
+        }
+
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .cart-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <button class="website-btn">
+                <a href="http://www.jscentique.com" target="_blank">www.jscentique.com</a>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#newarrivals" class="nav-link">New Arrivals</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+            </ul>
+            <!-- Hamburger Menu -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <ul class="nav-menu-mobile" id="navMenuMobile">
+            <li class="nav-item">
+                <a href="../index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
+            </li>
+            <li class="nav-item">
+                <a href="#newarrivals" class="nav-link">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- BEST SELLER FIRST SECTION -->
+    <section class="best-seller-section">
+
+       
+
+        <!-- LEFT SIDE MIDDLE CONTENT -->
+        <div class="best-seller-content">
+            <h1 class="best-seller-title">Top Best Sellers Collections</h1>
+            <p class="best-seller-desc">The fragrances everyone is falling in love with.</p>
+            <a href="#" class="shop-btn">Shop Now</a>
+        </div>
+
+        <!-- RIGHT SIDE HERO GRID -->
+        <div class="hero-grid">
+            <div class="hero-grid-item">
+                <img src="../assets/images/a.png" alt="Grid 1">
+            </div>
+            <div class="hero-grid-item">
+                <img src="../assets/images/grid2.png" alt="Grid 2">
+            </div>
+            <div class="hero-grid-item">
+                <img src="../assets/images/grid3.png" alt="Grid 3">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PRODUCT SECTION -->
+    <section class="product-section">
+        <div class="product-section-header">
+            <h2 class="product-section-title">Best Seller Products</h2>
+            <p class="product-section-desc">Made for Women</p>
+            <p class="product-section-subtitle">Discover our finest collection</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/grid1.png" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">J SCENTIQUE</h3>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid1.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/grid2.png" alt="Product 2">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">J SCENTIQUE</h3>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid2.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/grid3.png" alt="Product 3">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">J SCENTIQUE</h3>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid3.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/grid1.png" alt="Product 4">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">J SCENTIQUE</h3>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid1.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/grid2.png" alt="Product 5">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">J SCENTIQUE</h3>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid2.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/grid3.png" alt="Product 6">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">J SCENTIQUE</h3>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid3.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/grid1.png" alt="Product 7">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">J SCENTIQUE</h3>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid1.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/grid2.png" alt="Product 8">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">J SCENTIQUE</h3>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid2.png')">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/grid3.png" alt="Product 9">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">J SCENTIQUE</h3>
+                    <p class="product-price">₹1200</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid3.png')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CART OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+    <!-- CART SIDEBAR -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart</h2>
+            <button class="cart-close" onclick="closeCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p style="color: #999; text-align: center; padding: 40px 0;">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <button class="view-cart-btn" onclick="viewCart()">View Cart</button>
+        </div>
+    </div>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenuMobile = document.getElementById('navMenuMobile');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenuMobile.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = navMenuMobile.querySelectorAll('.nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenuMobile.classList.remove('active');
+            });
+        });
+
+        // Cart functionality
+        let cartItems = [];
+
+        function addToCart(name, price, image) {
+            cartItems.push({ name, price, image });
+            updateCart();
+            openCart();
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cartItems');
+            
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = '<p style="color: #999; text-align: center; padding: 40px 0;">Your cart is empty</p>';
+                return;
+            }
+
+            let html = '';
+            cartItems.forEach((item, index) => {
+                html += `
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="${item.image}" alt="${item.name}">
+                        </div>
+                        <div class="cart-item-details">
+                            <p class="cart-item-name">${item.name}</p>
+                            <p class="cart-item-price">₹${item.price}</p>
+                        </div>
+                    </div>
+                `;
+            });
+            cartItemsContainer.innerHTML = html;
+        }
+
+        function openCart() {
+            document.getElementById('cartSidebar').classList.add('active');
+            document.getElementById('cartOverlay').classList.add('active');
+        }
+
+        function closeCart() {
+            document.getElementById('cartSidebar').classList.remove('active');
+            document.getElementById('cartOverlay').classList.remove('active');
+        }
+
+        function viewCart() {
+            alert('Total items: ' + cartItems.length + '\nCart functionality coming soon!');
+        }
+    </script>
+
+</body>
+
+</html>
