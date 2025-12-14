@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Perfume</title>
+
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/fonts/font.css" />
+    <link rel="stylesheet" href="../assets/css/a.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- NAVBAR (UNCHANGED) -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <button class="website-btn">
+                <a href="http://www.jscentique.com" target="_blank">www.jscentique.com</a>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../pages/best-seller.html" class="nav-link">Best Seller</a></li>
+                <li class="nav-item"><a href="../pages/new-arrivals.html" class="nav-link active">New Arrivals</a></li>
+                <li class="nav-item"><a href="../pages/about.html" class="nav-link">About</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <ul class="nav-menu-mobile" id="navMenuMobile">
+            <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="../pages/best-seller.html" class="nav-link">Best Seller</a></li>
+            <li class="nav-item"><a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a></li>
+            <li class="nav-item"><a href="../pages/about.html" class="nav-link">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- NEW ARRIVALS HERO SECTION -->
+    <section class="new-arrivals-hero">
+        <div class="new-arrivals-hero-content">
+            <h1 class="new-arrivals-title">New Arrivals This Week</h1>
+            <a href="#" class="new-arrivals-shop-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- NEW ARRIVALS PRODUCT SECTION -->
+    <section class="new-arrivals-products">
+        <div class="new-arrivals-products-header">
+            <h2 class="new-arrivals-products-title">New Arrival Products</h2>
+            <p class="new-arrivals-products-desc">Made for Women</p>
+            <p class="new-arrivals-products-subtitle">Discover our finest collection</p>
+        </div>
+
+        <div class="new-arrivals-grid">
+
+            <!-- PRODUCT CARD -->
+            <div class="new-arrivals-card">
+                <div class="new-arrivals-image">
+                    <img src="../assets/images/img1.png" alt="Product">
+                </div>
+                <div class="new-arrivals-info">
+                    <h3 class="new-arrivals-name">J SCENTIQUE</h3>
+                    <p class="new-arrivals-price">₹1200</p>
+                    <button class="new-arrivals-add-btn"
+                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid1.png')">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- DUPLICATE CARDS -->
+            <div class="new-arrivals-card">
+                <div class="new-arrivals-image"><img src="../assets/images/img2.jpg"></div>
+                <div class="new-arrivals-info">
+                    <h3 class="new-arrivals-name">J SCENTIQUE</h3>
+                    <p class="new-arrivals-price">₹1200</p>
+                    <button class="new-arrivals-add-btn"
+                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid2.png')">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="new-arrivals-card">
+                <div class="new-arrivals-image"><img src="../assets/images/img3.png"></div>
+                <div class="new-arrivals-info">
+                    <h3 class="new-arrivals-name">J SCENTIQUE</h3>
+                    <p class="new-arrivals-price">₹1200</p>
+                    <button class="new-arrivals-add-btn"
+                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid3.png')">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+
+             <div class="new-arrivals-card">
+                <div class="new-arrivals-image">
+                    <img src="../assets/images/img1.png" alt="Product">
+                </div>
+                <div class="new-arrivals-info">
+                    <h3 class="new-arrivals-name">J SCENTIQUE</h3>
+                    <p class="new-arrivals-price">₹1200</p>
+                    <button class="new-arrivals-add-btn"
+                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid1.png')">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- DUPLICATE CARDS -->
+            <div class="new-arrivals-card">
+                <div class="new-arrivals-image"><img src="../assets/images/img2.jpg"></div>
+                <div class="new-arrivals-info">
+                    <h3 class="new-arrivals-name">J SCENTIQUE</h3>
+                    <p class="new-arrivals-price">₹1200</p>
+                    <button class="new-arrivals-add-btn"
+                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid2.png')">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="new-arrivals-card">
+                <div class="new-arrivals-image"><img src="../assets/images/img3.png"></div>
+                <div class="new-arrivals-info">
+                    <h3 class="new-arrivals-name">J SCENTIQUE</h3>
+                    <p class="new-arrivals-price">₹1200</p>
+                    <button class="new-arrivals-add-btn"
+                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid3.png')">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CART OVERLAY -->
+    <div class="new-arrivals-cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+    <!-- CART SIDEBAR -->
+    <div class="new-arrivals-cart-sidebar" id="cartSidebar">
+        <div class="new-arrivals-cart-header">
+            <h2 class="new-arrivals-cart-title">Your Cart</h2>
+            <button class="new-arrivals-cart-close" onclick="closeCart()">✕</button>
+        </div>
+
+        <div class="new-arrivals-cart-items" id="cartItems">
+            <p class="new-arrivals-cart-empty">Your cart is empty</p>
+        </div>
+
+        <div class="new-arrivals-cart-footer">
+            <button class="new-arrivals-view-cart-btn" onclick="viewCart()">View Cart</button>
+        </div>
+    </div>
+
+    <script src="../assets/javascript/bestseller.js"></script>
+</body>
+</html>
