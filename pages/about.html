@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxury Perfume</title>
@@ -60,6 +61,35 @@ body {
 }
 
 
+/* ==========================
+   TABLET + MOBILE (max-width: 991px)
+========================== */
+@media (max-width: 991px) {
+
+  .section-title {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto 35px;
+    font-size: 0.95rem;
+  }
+
+  /* ✅ ONE BELOW ONE */
+  .contact-details {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .contact-item {
+    text-align: center;
+  }
+}
+
+
 
 </style>
 
@@ -106,7 +136,7 @@ body {
         <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
       </li>
       <li class="nav-item">
-        <a href="../pages/about.html" class="nav-link">About</a>
+        <a href="../pages/about.html" class="nav-link active">About</a>
       </li>
     </ul>
   </nav>
