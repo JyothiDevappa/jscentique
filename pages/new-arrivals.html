@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luxury Perfume</title>
+    <title>Luxury Perfume - New Arrivals</title>
 
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/fonts/font.css" />
@@ -13,7 +13,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 
 <body>
 
@@ -61,111 +60,65 @@
         </div>
 
         <div class="new-arrivals-grid">
-
-            <!-- PRODUCT CARD -->
+            <!-- Product 1 -->
             <div class="new-arrivals-card">
-                <div class="new-arrivals-image">
-                    <img src="../assets/images/img1.png" alt="Product">
-                </div>
+                <div class="new-arrivals-image"><img src="../assets/images/img1.png" alt="Product"></div>
                 <div class="new-arrivals-info">
                     <h3 class="new-arrivals-name">J SCENTIQUE</h3>
                     <p class="new-arrivals-price">₹1200</p>
                     <button class="new-arrivals-add-btn"
-                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid1.png')">
-                        Add to Cart
-                    </button>
+                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/img1.png')">Add to Cart</button>
                 </div>
             </div>
 
-            <!-- DUPLICATE CARDS -->
+            <!-- Product 2 -->
             <div class="new-arrivals-card">
-                <div class="new-arrivals-image"><img src="../assets/images/img2.jpg"></div>
+                <div class="new-arrivals-image"><img src="../assets/images/img2.jpg" alt="Product"></div>
                 <div class="new-arrivals-info">
                     <h3 class="new-arrivals-name">J SCENTIQUE</h3>
                     <p class="new-arrivals-price">₹1200</p>
                     <button class="new-arrivals-add-btn"
-                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid2.png')">
-                        Add to Cart
-                    </button>
+                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/img2.jpg')">Add to Cart</button>
                 </div>
             </div>
 
+            <!-- Product 3 -->
             <div class="new-arrivals-card">
-                <div class="new-arrivals-image"><img src="../assets/images/img3.png"></div>
+                <div class="new-arrivals-image"><img src="../assets/images/img3.png" alt="Product"></div>
                 <div class="new-arrivals-info">
                     <h3 class="new-arrivals-name">J SCENTIQUE</h3>
                     <p class="new-arrivals-price">₹1200</p>
                     <button class="new-arrivals-add-btn"
-                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid3.png')">
-                        Add to Cart
-                    </button>
+                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/img3.png')">Add to Cart</button>
                 </div>
             </div>
-
-
-             <div class="new-arrivals-card">
-                <div class="new-arrivals-image">
-                    <img src="../assets/images/img1.png" alt="Product">
-                </div>
-                <div class="new-arrivals-info">
-                    <h3 class="new-arrivals-name">J SCENTIQUE</h3>
-                    <p class="new-arrivals-price">₹1200</p>
-                    <button class="new-arrivals-add-btn"
-                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid1.png')">
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <!-- DUPLICATE CARDS -->
-            <div class="new-arrivals-card">
-                <div class="new-arrivals-image"><img src="../assets/images/img2.jpg"></div>
-                <div class="new-arrivals-info">
-                    <h3 class="new-arrivals-name">J SCENTIQUE</h3>
-                    <p class="new-arrivals-price">₹1200</p>
-                    <button class="new-arrivals-add-btn"
-                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid2.png')">
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <div class="new-arrivals-card">
-                <div class="new-arrivals-image"><img src="../assets/images/img3.png"></div>
-                <div class="new-arrivals-info">
-                    <h3 class="new-arrivals-name">J SCENTIQUE</h3>
-                    <p class="new-arrivals-price">₹1200</p>
-                    <button class="new-arrivals-add-btn"
-                        onclick="addToCart('J SCENTIQUE',1200,'../assets/images/grid3.png')">
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- CART OVERLAY -->
-    <div class="new-arrivals-cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+
+
+     <!-- CART OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 
     <!-- CART SIDEBAR -->
-    <div class="new-arrivals-cart-sidebar" id="cartSidebar">
-        <div class="new-arrivals-cart-header">
-            <h2 class="new-arrivals-cart-title">Your Cart</h2>
-            <button class="new-arrivals-cart-close" onclick="closeCart()">✕</button>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart</h2>
+            <button class="cart-close" onclick="closeCart()">✕</button>
         </div>
-
-        <div class="new-arrivals-cart-items" id="cartItems">
-            <p class="new-arrivals-cart-empty">Your cart is empty</p>
+        <div class="cart-items" id="cartItems">
+            <p style="color: #999; text-align: center; padding: 40px 0;">Your cart is empty</p>
         </div>
-
-        <div class="new-arrivals-cart-footer">
-            <button class="new-arrivals-view-cart-btn" onclick="viewCart()">View Cart</button>
+        <div class="cart-footer">
+            <button class="view-cart-btn" onclick="viewCart()">View Cart</button>
         </div>
     </div>
+    
 
+    <!-- JS -->
+    <script src="../assets/javascript/index.js"></script>
     <script src="../assets/javascript/bestseller.js"></script>
-      <script src="../assets/javascript/index.js"></script>
 
 </body>
 </html>
