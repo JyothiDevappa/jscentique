@@ -7,7 +7,8 @@
 .new-arrivals-hero {
     width: 100%;
     height: 100vh;
-    background: url('../images/3.png') center/cover no-repeat;
+    background: url('../images/hello.png') center/cover no-repeat;
+
     position: relative;
     display: flex;
     align-items: center;
