@@ -1,75 +1,31 @@
+function openQuickView(name, price, size, notes, desc, img, tag = "BEST SELLER") {
+  qvName.innerText = name;
+  qvPrice.innerText = price;
+  qvSize.innerText = size;
+  qvNotes.innerText = notes;
+  qvDesc.innerText = desc;
+  qvImage.src = img;
+  qvTag.innerText = tag;
 
-
-/* -------------------------------------------------------
-    CART FUNCTIONALITY (OPEN, CLOSE, ADD ITEMS)
--------------------------------------------------------- */
-
-// Store all cart items here
-let cartItems = [];
-
-/**
- * Add product to cart
- * @param {string} name  - product name
- * @param {number} price - product price
- * @param {string} image - image URL
- */
-function addToCart(name, price, image) {
-    cartItems.push({ name, price, image });
-    updateCart();
-    openCart(); // auto open when product added
+  qvOverlay.style.display = "block";
+  qvModal.style.display = "block";
 }
 
-/**
- * Updates the cart items inside the sidebar
- */
-function updateCart() {
-    const cartItemsContainer = document.getElementById('cartItems');
-
-    // If no items → show empty message
-    if (cartItems.length === 0) {
-        cartItemsContainer.innerHTML =
-            '<p style="color: #999; text-align: center; padding: 40px 0;">Your cart is empty</p>';
-        return;
-    }
-
-    // Build updated HTML for cart items
-    let html = '';
-    cartItems.forEach((item, index) => {
-        html += `
-            <div class="cart-item">
-                <div class="cart-item-image">
-                    <img src="${item.image}" alt="${item.name}">
-                </div>
-                <div class="cart-item-details">
-                    <p class="cart-item-name">${item.name}</p>
-                    <p class="cart-item-price">₹${item.price}</p>
-                </div>
-            </div>
-        `;
-    });
-
-    cartItemsContainer.innerHTML = html;
+function closeQuickView() {
+  qvOverlay.style.display = "none";
+  qvModal.style.display = "none";
 }
 
-/**
- * Opens the cart sidebar
- */
-function openCart() {
-    document.getElementById('cartSidebar').classList.add('active');
-    document.getElementById('cartOverlay').classList.add('active');
+function toggleHeart(el) {
+  el.classList.toggle("active");
 }
 
-/**
- * Closes the cart sidebar
- */
-function closeCart() {
-    document.getElementById('cartSidebar').classList.remove('active');
-    document.getElementById('cartOverlay').classList.remove('active');
+
+
+function openCartDrawer() {
+  document.getElementById("cartDrawer").classList.add("open");
 }
 
-/**
- * Temporary functionality for View Cart button
- */
-function viewCart() {
-    alert('Total items: ' + cartItems.length + '\nCart functionality coming soon!');
+function closeCartDrawer() {
+  document.getElementById("cartDrawer").classList.remove("open");
 }

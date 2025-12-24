@@ -64,3 +64,23 @@ mobileLinks.forEach(link => {
       thirdSection.scrollIntoView({ behavior: "smooth" }); // 👈 GOES TO 3RD
     }
   });
+
+
+
+  // testmonals
+
+    const testimonials = document.querySelectorAll('.testimonial');
+  const dots = document.querySelectorAll('.dot');
+  let currentIndex = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach((item, i) => {
+      item.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+  }
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    showTestimonial(currentIndex);
+  }, 2000);

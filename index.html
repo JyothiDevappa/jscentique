@@ -119,7 +119,7 @@
       <div class="product-card">
         <div class="product-image">
           <span class="badge">New</span>
-          <img src="assets/images/about.png" alt="Perfume 3">
+          <img src="assets/images/Does-perfume-expire.jpg" alt="Perfume 3">
         </div>
         <div class="product-info">
           <h3>J SCENTIQUE</h3>
@@ -134,7 +134,7 @@
       <div class="product-card">
         <div class="product-image">
           <span class="badge">New</span>
-          <img src="assets/images/about.png" alt="Perfume 4">
+          <img src="assets/images/perfume-1.webp" alt="Perfume 4">
         </div>
         <div class="product-info">
           <h3>J SCENTIQUE</h3>
@@ -169,106 +169,12 @@
 
 
 
-  <!-- THIRD SECTION -->
-  <section class="third-section" id="about">
-    <div class="third-content">
-
-      <div class="third-top-left">
-        <h2>Signature Scents</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-      </div>
-
-      <div class="third-top-right">
-        <div class="image-right-top">
-          <img src="assets/images/about.png" alt="Perfume Top">
-        </div>
-      </div>
-
-      <div class="third-bottom-left">
-        <div class="image-left-bottom">
-          <img src="assets/images/international-fragrance-day.avif" alt="Perfume Bottom">
-        </div>
-      </div>
-
-      <div class="third-bottom-right">
-        <h3>Timeless Elegance</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.</p>
-      </div>
-
-
-
-    </div>
-  </section>
 
 
 
   <button id="scrollArrow" class="scroll-arrow">
     <span class="arrow"></span>
   </button>
-
-
-
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="testimonials-inner">
-
-    <h2>What Our Customers Say</h2>
-
-    <div class="testimonial-slider">
-
-      <div class="testimonial active">
-        <img src="assets/images/img3.png" alt="Customer">
-        <p>
-          “Absolutely mesmerising fragrances. Long-lasting and truly luxurious.
-          J SCENTIQUE has become my signature scent.”
-        </p>
-        <h4>Aarav Mehta <span>• Mumbai</span></h4>
-      </div>
-
-      <div class="testimonial">
-        <img src="assets/images/img3.png" alt="Customer">
-        <p>
-          “The packaging, the scent, the experience — everything feels premium.
-          Highly recommended for perfume lovers.”
-        </p>
-        <h4>Ananya Sharma <span>• Delhi</span></h4>
-      </div>
-
-      <div class="testimonial">
-        <img src="assets/images/img3.png" alt="Customer">
-        <p>
-          “I’ve received endless compliments. These perfumes are elegant,
-          refined and perfect for every occasion.”
-        </p>
-        <h4>Rohan Verma <span>• Bengaluru</span></h4>
-      </div>
-
-      <div class="testimonial">
-        <img src="assets/images/img3.png" alt="Customer">
-        <p>
-          “A luxury fragrance brand that actually delivers quality.
-          Totally worth it!”
-        </p>
-        <h4>Priya Nair <span>• Kochi</span></h4>
-      </div>
-
-    </div>
-
-    <!-- DOTS -->
-    <div class="testimonial-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-  </div>
-</section>
-
 
 
 
@@ -306,10 +212,10 @@
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">New Arrivals</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/best-seller.html">Shop</a></li>
+        <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
+        <li><a href="pages/about.html">About Us</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
@@ -344,23 +250,7 @@
   </div>
 </footer>
 
-<script>
-  const testimonials = document.querySelectorAll('.testimonial');
-  const dots = document.querySelectorAll('.dot');
-  let currentIndex = 0;
 
-  function showTestimonial(index) {
-    testimonials.forEach((item, i) => {
-      item.classList.toggle('active', i === index);
-      dots[i].classList.toggle('active', i === index);
-    });
-  }
-
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
-  }, 2000);
-</script>
 
 
   <script src="assets/javascript/bestseller.js"></script>

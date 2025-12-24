@@ -1,0 +1,474 @@
+@import url(assets/fonts/font.css);
+
+
+.new-arrivals-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.1) 60%),
+        url('../images/perfume-1.webp') center right / cover no-repeat;
+
+
+    color: #fff;
+    overflow: hidden;
+}
+
+.new-arrivals-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at left, rgba(0, 0, 0, 0.35), transparent 60%);
+}
+
+/* CONTENT PANEL */
+.new-arrivals-hero-content {
+    position: relative;
+    max-width: 520px;
+    z-index: 2;
+}
+
+/* BADGE */
+.new-arrivals-badge {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #c9a24d;
+    margin-bottom: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* TITLE */
+.new-arrivals-title {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    font-weight: 500;
+    margin-bottom: 22px;
+    margin-top: 40px;
+    font-family: 'Milven', serif;
+    line-height: 1.5;
+}
+
+
+/* DESCRIPTION */
+.new-arrivals-desc {
+    font-size: 2em;
+    line-height: 1.2;
+    color: #edeeac;
+    margin-bottom: 10px;
+    font-family: 'Mindway', serif;
+}
+
+/* BUTTON */
+.new-arrivals-shop-btn {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 18px 38px;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.3s ease;
+
+    margin-top: 30px;
+
+}
+
+.new-arrivals-shop-btn:hover {
+    background: #c9a24d;
+    color: #000;
+    border-color: #c9a24d;
+}
+
+
+
+/* =======================
+   NEW ARRIVALS – PRODUCTS
+======================= */
+
+.new-arrivals-products {
+    width: 100%;
+    padding: 80px 80px;
+    background: #fafafa;
+}
+
+.new-arrivals-products-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.new-arrivals-products-title {
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-family: 'Milven', serif;
+    color: #333;
+}
+
+.new-arrivals-products-desc {
+
+    margin-bottom: 20px;
+}
+
+.new-arrivals-products-subtitle {
+
+    font-size: 0.95rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    /* 👈 center the text */
+    color: #999;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
+:root {
+  --brand-dark: #121212;
+  --brand-muted: #6f6f6f;
+  --brand-accent: #b08a5a; /* muted gold */
+  --brand-bg: #f6f5f3;
+}
+
+
+.new-arrivals {
+  background: var(--brand-bg);
+  padding: 40px 16px;
+}
+
+
+
+.new-arrivals-card {
+  background: #fff;
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* badge */
+.new-arrivals-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #c9a24d;
+  /* background: var(--brand-dark); */
+  color: #ffffff;
+  font-size: 11px;
+  padding: 4px 10px;
+  /* border-radius: 20px; */
+  z-index: 2;
+}
+
+/* IMAGE — reduced height */
+.new-arrivals-image {
+  position: relative;
+  height: 350px;   /* 👈 reduced */
+}
+
+.new-arrivals-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* QUICK VIEW on hover */
+.quick-view-btn {
+  position: absolute;
+  inset: 0;
+  background: rgba(18,18,18,0.55);
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.new-arrivals-image:hover .quick-view-btn {
+  opacity: 1;
+}
+
+/* INFO */
+.new-arrivals-info {
+  padding: 14px;
+  text-align: center;
+}
+
+.new-arrivals-info h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.new-arrivals-info p {
+  font-size: 12px;
+  color: var(--brand-muted);
+}
+
+.new-arrivals-info strong {
+  display: block;
+  margin-top: 6px;
+}
+
+
+
+
+
+
+
+
+
+.quick-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,15,15,0.65);
+  display: none;
+  z-index: 999;
+}
+
+.quick-modal {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  max-width: 880px;
+  background: #fff;
+  border-radius: 18px;
+  display: none;
+  z-index: 1000;
+}
+
+.quick-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.quick-wrapper {
+  display: flex;
+  min-height: 420px;
+}
+
+/* LEFT IMAGE */
+.quick-image {
+  width: 45%;
+  background: #f3f3f3;
+}
+
+.quick-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT CONTENT */
+.quick-content {
+  width: 55%;
+  display: flex;
+  align-items: center; /* 👈 centers vertically */
+  padding: 40px;
+}
+
+.quick-center {
+  width: 100%;
+}
+
+.quick-tag {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #b08a5a;
+}
+
+.quick-content h2 {
+  font-size: 22px;
+  margin: 10px 0 6px;
+}
+
+.quick-notes {
+  font-size: 13px;
+  color: #b08a5a;
+  margin-bottom: 14px;
+}
+
+.quick-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* META */
+.quick-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+/* ACTIONS */
+.quick-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-buy {
+  flex: 1;
+  background: #121212;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn-cart {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #121212;
+  padding: 12px 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn-wishlist {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* TRUST */
+.quick-trust {
+  display: flex;
+  gap: 16px;
+  margin-top: 22px;
+  font-size: 12px;
+  color: #777;
+}
+
+
+
+
+
+
+
+
+
+.celebration-products {
+  background: #fff;
+  padding: 70px 16px;
+}
+
+.celebration-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+.celebration-heading h2 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.celebration-heading p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* GRID */
+.celebration-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.celebration-card {
+  background: #f6f5f3;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* BADGE */
+.celebration-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #121212;
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.celebration-badge.limited {
+  background: #b08a5a;
+}
+
+/* IMAGE */
+.celebration-image {
+  position: relative;
+  height: 320px;
+}
+
+.celebration-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* QUICK VIEW */
+.celebration-quick {
+  position: absolute;
+  inset: 0;
+  background: rgba(18,18,18,0.55);
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.celebration-image:hover .celebration-quick {
+  opacity: 1;
+}
+
+/* INFO */
+.celebration-info {
+  padding: 18px;
+  text-align: center;
+}
+
+.celebration-info h4 {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.celebration-info p {
+  font-size: 13px;
+  color: #777;
+  margin: 6px 0;
+}

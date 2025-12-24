@@ -81,142 +81,115 @@
 
     </section>
 
-    <!-- PRODUCT SECTION -->
-    <section class="product-section">
-        <div class="product-section-header">
-            <h2 class="product-section-title">Best Seller Products</h2>
-            <p class="product-section-desc">Made for Women</p>
-            <p class="product-section-subtitle">Discover our finest collection</p>
-        </div>
 
-        <div class="product-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/grid1.png" alt="Product 1">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">J SCENTIQUE</h3>
-                    <p class="product-price">₹1200</p>
-                    <button class="add-to-cart-btn"
-                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid1.png')">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/grid2.png" alt="Product 2">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">J SCENTIQUE</h3>
-                    <p class="product-price">₹1200</p>
-                    <button class="add-to-cart-btn"
-                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid2.png')">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/grid3.png" alt="Product 3">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">J SCENTIQUE</h3>
-                    <p class="product-price">₹1200</p>
-                    <button class="add-to-cart-btn"
-                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid3.png')">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Product 4 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/a.png" alt="Product 4">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">J SCENTIQUE</h3>
-                    <p class="product-price">₹1200</p>
-                    <button class="add-to-cart-btn"
-                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid1.png')">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Product 5 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/grid2.png" alt="Product 5">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">J SCENTIQUE</h3>
-                    <p class="product-price">₹1200</p>
-                    <button class="add-to-cart-btn"
-                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid2.png')">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Product 6 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/grid3.png" alt="Product 6">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">J SCENTIQUE</h3>
-                    <p class="product-price">₹1200</p>
-                    <button class="add-to-cart-btn"
-                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid3.png')">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Product 7 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/grid1.png" alt="Product 7">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">J SCENTIQUE</h3>
-                    <p class="product-price">₹1200</p>
-                    <button class="add-to-cart-btn"
-                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid1.png')">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Product 8 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="../assets/images/grid2.png" alt="Product 8">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">J SCENTIQUE</h3>
-                    <p class="product-price">₹1200</p>
-                    <button class="add-to-cart-btn"
-                        onclick="addToCart('J SCENTIQUE', 1200, '../assets/images/grid2.png')">Add to Cart</button>
-                </div>
-            </div>
 
-        </div>
-    </section>
 
-    <!-- CART OVERLAY -->
-    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 
-    <!-- CART SIDEBAR -->
-    <div class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header">
-            <h2 class="cart-title">Your Cart</h2>
-            <button class="cart-close" onclick="closeCart()">✕</button>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <p style="color: #999; text-align: center; padding: 40px 0;">Your cart is empty</p>
-        </div>
-        <div class="cart-footer">
-            <button class="view-cart-btn" onclick="viewCart()">View Cart</button>
-        </div>
+    <section class="best-seller">
+
+  <div class="best-header">
+    <h2>Best Seller Products</h2>
+    <p class="best-sub">Made for Women</p>
+    <span class="best-desc">Our most loved fragrances, chosen again and again.</span>
+  </div>
+
+  <div class="best-grid">
+
+    <!-- PRODUCT CARD -->
+    <div class="best-card">
+
+      <span class="best-badge">BEST</span>
+
+      <div class="best-image">
+        <img src="../assets/images/grid1.png" alt="J Scentique">
+
+        <button class="best-quick"
+          onclick="openQuickView(
+            'J SCENTIQUE – Signature',
+            '₹ 1,200',
+            '50 ML',
+            'Floral • Musk',
+            'A signature fragrance designed for everyday elegance.',
+            '../assets/images/grid1.png'
+          )">
+          Quick View
+        </button>
+
+        <button class="best-wishlist">♡</button>
+      </div>
+
+      <div class="best-info">
+        <h4>J SCENTIQUE</h4>
+        <p>Signature · 50 ML</p>
+        <strong>₹ 1,200</strong>
+      </div>
+
     </div>
 
-    <button id="scrollArrow" class="scroll-arrow">
-        <span class="arrow"></span>
-    </button>
+    <!-- DUPLICATE SAME CARD STRUCTURE FOR OTHER PRODUCTS -->
+    <!-- Just change image & details -->
+
+  </div>
+
+
+
+
+
+  <!-- QUICK VIEW OVERLAY -->
+<div class="qv-overlay" id="qvOverlay" onclick="closeQuickView()"></div>
+
+<!-- QUICK VIEW -->
+<div class="qv-modal" id="qvModal">
+  <button class="qv-close" onclick="closeQuickView()">✕</button>
+
+  <div class="qv-layout">
+
+    <img id="qvImage" src="" alt="Perfume">
+
+    <div class="qv-content">
+      <span class="qv-tag" id="qvTag">BEST SELLER</span>
+
+      <h2 id="qvName"></h2>
+      <p class="qv-notes" id="qvNotes"></p>
+      <p class="qv-desc" id="qvDesc"></p>
+
+      <div class="qv-meta">
+        <span id="qvSize"></span>
+        <strong id="qvPrice"></strong>
+      </div>
+
+      <div class="qv-actions">
+        <button class="btn-buy">Buy Now</button>
+        <button class="btn-cart" onclick="openCartDrawer()">Add to Bag</button>
+        <button class="btn-heart" id="qvHeart" onclick="toggleHeart(this)">♡</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="cart-drawer" id="cartDrawer">
+  <h3>Added to Bag</h3>
+  <p>Your fragrance has been added.</p>
+  <button onclick="closeCartDrawer()">Continue Shopping</button>
+</div>
+
+</section>
+
+
+
+
+
 
 
     <script src="../assets/javascript/index.js"></script>

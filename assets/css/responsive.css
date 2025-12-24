@@ -287,3 +287,147 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== MOBILE – STRUCTURED LUXURY HERO ===== */
+@media (max-width: 768px) {
+
+    .new-arrivals-hero {
+        height: 100vh;
+        padding: 0;
+        display: flex;
+        background:
+            linear-gradient(180deg,
+                rgba(0, 0, 0, 0.65) 0%,
+                rgba(0, 0, 0, 0.65) 50%,
+                rgba(0, 0, 0, 0.85) 100%),
+            url('../images/perfume-1.webp') center / cover no-repeat;
+    }
+
+    /* CONTENT WRAPPER */
+    .new-arrivals-hero-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 26px;
+    }
+
+    /* TOP BADGE */
+    .new-arrivals-badge {
+        align-self: flex-start;
+        font-size: 13px;
+        letter-spacing: 4px;
+        padding: 6px 14px;
+        color: #e3c77a;
+        margin-bottom: 50px;
+        /* pushes content to center */
+        font-family: 'Courier New', monospace;
+    }
+
+    /* CENTER CONTENT */
+    .new-arrivals-title {
+        font-size: 1.9rem;
+        letter-spacing: 4px;
+        line-height: 2;
+        font-weight: 400;
+        color: #f3eee8;
+        max-width: 90%;
+        margin-bottom: 18px;
+        /* font-family: 'Montserrat', sans-serif; */
+
+    }
+
+    .new-arrivals-desc {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        /* color: #d4cec6; */
+        max-width: 95%;
+        margin-bottom: 60px;
+        /* space before button */
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    /* BUTTON – NOT STUCK TO BOTTOM */
+    .new-arrivals-shop-btn {
+        align-self: flex-start;
+        padding: 14px 34px;
+        font-size: 12px;
+        letter-spacing: 3px;
+        border: 1px solid rgba(227, 199, 122, 0.6);
+        color: #f4efe9;
+        background: transparent;
+    }
+
+    .new-arrivals-shop-btn:hover {
+        background: #e3c77a;
+        color: #000;
+    }
+}
+
+
+
+
+
+
+
+
+

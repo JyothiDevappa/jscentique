@@ -13,12 +13,15 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
 
 body {
+  background: #0b0b0b;
+
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
   /* background-image: url(../images/brown.png); */
@@ -299,7 +302,7 @@ body {
 
 .third-content {
 
-  color: black !important;
+  color: rgb(153, 146, 146) !important;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -344,7 +347,7 @@ body {
   letter-spacing: 0.5px;
   font-family: 'Mindway', serif;
 
-  color: black !important;
+  color: rgb(236, 226, 226) !important;
 
 
 }
@@ -401,7 +404,7 @@ body {
   line-height: 1;
   letter-spacing: 0.5px;
   font-family: 'Mindway', serif;
-  color: black;
+  color: rgb(231, 223, 223);
 }
 
 .image-left-bottom {
@@ -472,7 +475,8 @@ body {
   height: 12px;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  transform: rotate(45deg); /* DOWN */
+  transform: rotate(45deg);
+  /* DOWN */
   transition: transform 0.3s ease;
 }
 
@@ -506,7 +510,8 @@ body {
 .section-title h2 {
   font-family: 'Milven', serif;
   font-size: 3rem;
-  color: #b89f6f; /* classy golden tone */
+  color: #b89f6f;
+  /* classy golden tone */
   letter-spacing: 3px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -537,7 +542,7 @@ body {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(4px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   transition: all 0.4s ease;
@@ -546,7 +551,7 @@ body {
 
 .product-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
   border: 2px solid #b89f6f;
 }
 
@@ -590,13 +595,14 @@ body {
 
 .product-info h3 {
   font-family: 'Milven', serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
   color: #333;
   margin-bottom: 5px;
 }
 
 .product-info .desc {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #666;
   margin-bottom: 6px;
 }
@@ -629,7 +635,7 @@ body {
 .buy-btn:hover {
   background: #b89f6f;
   color: #fff;
-  box-shadow: 0 5px 15px rgba(184,159,111,0.4);
+  box-shadow: 0 5px 15px rgba(184, 159, 111, 0.4);
 }
 
 /* Responsive */
@@ -740,7 +746,8 @@ body {
 }
 
 .newsletter-form button:hover {
-  background: #c9a24d; /* luxury gold touch */
+  background: #c9a24d;
+  /* luxury gold touch */
   color: #000;
 }
 
