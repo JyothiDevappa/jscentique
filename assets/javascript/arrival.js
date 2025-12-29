@@ -1,17 +1,30 @@
-function openQuickView(n, p, s, no, d, i) {
-      qName.innerText = n;
-      qPrice.innerText = p;
-      qSize.innerText = s;
-      qNotes.innerText = no;
-      qDesc.innerText = d;
-      qImage.src = i;
-      quickOverlay.style.display = "block";
-      quickModal.style.display = "block";
-    }
-    function closeQuickView() {
-      quickOverlay.style.display = "none";
-      quickModal.style.display = "none";
-    }
-    function toggleHeart(b) {
-      b.classList.toggle("active");
-    }
+const arrivalQuickOverlay = document.getElementById("arrivalQuickOverlay");
+const arrivalQuickModal = document.getElementById("arrivalQuickModal");
+
+const arrivalQName = document.getElementById("arrivalQName");
+const arrivalQPrice = document.getElementById("arrivalQPrice");
+const arrivalQSize = document.getElementById("arrivalQSize");
+const arrivalQNotes = document.getElementById("arrivalQNotes");
+const arrivalQDesc = document.getElementById("arrivalQDesc");
+const arrivalQNameImage = document.getElementById("arrivalQNameImage");
+
+function openArrivalQuickView(name, price, size, notes, desc, img) {
+  arrivalQName.innerText = name;
+  arrivalQPrice.innerText = price;
+  arrivalQSize.innerText = size;
+  arrivalQNotes.innerText = notes;
+  arrivalQDesc.innerText = desc;
+  arrivalQNameImage.src = img;
+
+  arrivalQuickOverlay.style.display = "block";
+  arrivalQuickModal.style.display = "block";
+}
+
+function closeArrivalQuickView() {
+  arrivalQuickOverlay.style.display = "none";
+  arrivalQuickModal.style.display = "none";
+}
+
+function toggleHeart(btn) {
+  btn.classList.toggle("active");
+}

@@ -2,201 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luxury Perfume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Sellers – J Scentique</title>
 
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/fonts/font.css" />
-    <link rel="stylesheet" href="../assets/css/best-seller.css" />
-    <link rel="stylesheet" href="../assets/css/responsive.css" />
-    <link rel="stylesheet" href="../assets/css/rs.css" />
-
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/best-seller.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <button class="website-btn">
-                <a href="http://www.jscentique.com" target="_blank">www.jscentique.com</a>
-            </button>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../pages/best-seller.html" class="nav-link active">Best Seller</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../pages/about.html" class="nav-link">About</a>
-                </li>
-            </ul>
-            <!-- Hamburger Menu -->
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <ul class="nav-menu-mobile" id="navMenuMobile">
-            <li class="nav-item">
-                <a href="../index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="../pages/best-seller.html" class="nav-link active">Best Seller</a>
-            </li>
-            <li class="nav-item">
-                <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-            </li>
-            <li class="nav-item">
-                <a href="../pages/about.html" class="nav-link">About</a>
-            </li>
-        </ul>
-    </nav>
+  <!-- ================= HERO (OLD STYLE KEPT) ================= -->
+  <section class="best-seller-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span>BEST SELLERS</span>
+      <h1>Top Best Seller Collections</h1>
+      <p>The fragrances everyone comes back for.</p>
+      <a href="#products" class="hero-btn">Explore Collection</a>
+    </div>
+  </section>
 
-    <!-- BEST SELLER FIRST SECTION -->
-    <section class="best-seller-section">
+  <!-- ================= PRODUCTS ================= -->
+  <section class="products" id="products">
 
-
-
-        <!-- LEFT SIDE MIDDLE CONTENT -->
-        <div class="best-seller-content">
-            <h1 class="best-seller-title">Top Best Sellers Collections</h1>
-            <!-- <p class="best-seller-desc">The fragrances everyone is falling in love with.</p> -->
-            <a href="#" class="shop-btn">Shop Now</a>
-        </div>
-
-
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="best-seller">
-
-  <div class="best-header">
-    <h2>Best Seller Products</h2>
-    <p class="best-sub">Made for Women</p>
-    <span class="best-desc">Our most loved fragrances, chosen again and again.</span>
-  </div>
-
-  <div class="best-grid">
-
-    <!-- PRODUCT CARD -->
-    <div class="best-card">
-
-      <span class="best-badge">BEST</span>
-
-      <div class="best-image">
-        <img src="../assets/images/grid1.png" alt="J Scentique">
-
-        <button class="best-quick"
-          onclick="openQuickView(
-            'J SCENTIQUE – Signature',
-            '₹ 1,200',
-            '50 ML',
-            'Floral • Musk',
-            'A signature fragrance designed for everyday elegance.',
-            '../assets/images/grid1.png'
-          )">
-          Quick View
-        </button>
-
-        <button class="best-wishlist">♡</button>
-      </div>
-
-      <div class="best-info">
-        <h4>J SCENTIQUE</h4>
-        <p>Signature · 50 ML</p>
-        <strong>₹ 1,200</strong>
-      </div>
-
+    <!-- CENTER TITLE -->
+    <div class="products-header">
+      <h2>Best Seller Products</h2>
+      <p>Our most loved fragrances, chosen again and again.</p>
     </div>
 
-    <!-- DUPLICATE SAME CARD STRUCTURE FOR OTHER PRODUCTS -->
-    <!-- Just change image & details -->
+    <div class="grid">
 
-  </div>
+      <!-- PRODUCT -->
+      <article class="product">
+
+        <div class="image">
+          <img src="../assets/images/grid1.png" alt="J Scentique Signature">
+
+          <!-- QUICK VIEW ICON -->
+          <button class="quick-view" onclick="openQuickView(
+          'J SCENTIQUE – Signature',
+          '₹ 1,200',
+          '50 ML',
+          'Floral · Musk',
+          'A refined everyday fragrance crafted for confident women. Soft florals blend with clean musk to create a scent that feels intimate, elegant, and timeless.',
+          '../assets/images/grid1.png'
+        )">+</button>
 
 
+         <div class="wishlist-btn">
+  <!-- Outline Heart -->
+  <svg viewBox="0 0 24 24">
+    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
+             4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 
+             14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+             6.86-8.55 11.54L12 21.35z"/>
+  </svg>
+</div>
 
 
+        </div>
 
-  <!-- QUICK VIEW OVERLAY -->
-<div class="qv-overlay" id="qvOverlay" onclick="closeQuickView()"></div>
+        <div class="info">
+          <h3>J SCENTIQUE</h3>
+          <span>Signature · 50 ML</span>
 
-<!-- QUICK VIEW -->
-<div class="qv-modal" id="qvModal">
-  <button class="qv-close" onclick="closeQuickView()">✕</button>
+          <div class="rating">★★★★☆ <small>(124)</small></div>
 
-  <div class="qv-layout">
+          <strong>₹ 1,200</strong>
 
-    <img id="qvImage" src="" alt="Perfume">
+          <!-- ACTIONS -->
+          <div class="actions">
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Bag</button>
+          </div>
+        </div>
 
-    <div class="qv-content">
-      <span class="qv-tag" id="qvTag">BEST SELLER</span>
+      </article>
 
-      <h2 id="qvName"></h2>
-      <p class="qv-notes" id="qvNotes"></p>
-      <p class="qv-desc" id="qvDesc"></p>
+      <!-- DUPLICATE SAME STRUCTURE -->
 
-      <div class="qv-meta">
-        <span id="qvSize"></span>
+    </div>
+  </section>
+
+  <!-- ================= QUICK VIEW ================= -->
+  <div class="qv-overlay" id="qvOverlay" onclick="closeQuickView()"></div>
+
+  <div class="qv-modal" id="qvModal">
+    <button class="qv-close" onclick="closeQuickView()">×</button>
+
+    <div class="qv-wrap">
+      <img id="qvImage" alt="">
+
+      <div class="qv-info">
+        <small id="qvSize"></small>
+        <h2 id="qvName"></h2>
+
+        <p class="qv-notes" id="qvNotes"></p>
+        <p class="qv-desc" id="qvDesc"></p>
+
+        <div class="qv-trust">
+          <span>✓ Long lasting</span>
+          <span>✓ 100% authentic</span>
+          <span>✓ Free shipping</span>
+        </div>
+
         <strong id="qvPrice"></strong>
-      </div>
 
-      <div class="qv-actions">
-        <button class="btn-buy">Buy Now</button>
-        <button class="btn-cart" onclick="openCartDrawer()">Add to Bag</button>
-        <button class="btn-heart" id="qvHeart" onclick="toggleHeart(this)">♡</button>
+        <div class="qv-actions">
+          <button class="buy">Buy Now</button>
+          <button class="cart">Add to Bag</button>
+        </div>
       </div>
     </div>
-
   </div>
-</div>
 
-
-
-
-<div class="cart-drawer" id="cartDrawer">
-  <h3>Added to Bag</h3>
-  <p>Your fragrance has been added.</p>
-  <button onclick="closeCartDrawer()">Continue Shopping</button>
-</div>
-
-</section>
-
-
-
-
-
-
-
-    <script src="../assets/javascript/index.js"></script>
-
-    <script src="../assets/javascript/bestseller.js"></script>
-
-
+  <script src="../assets/javascript/bestseller.js"></script>
 </body>
 
 </html>

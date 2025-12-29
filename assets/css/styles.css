@@ -848,33 +848,55 @@ body {
   z-index:999;
 }
 
-.quick-modal{
+/* .quick-modal{
   position:fixed;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
   width:900px;
   background:#111;
-  border-radius:20px;
   display:none;
   z-index:1000;
   overflow:hidden;
+} */
+
+.quick-modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 480px;        /* ✅ FIXED HEIGHT */
+  background: #111;
+  display: none;
+  z-index: 1000;
+  overflow: hidden;    /* ❌ NO SCROLL */
 }
+
 
 /* ================= MODAL CONTENT ================= */
 .quick-wrapper{
   display:flex;
 }
 
+.quick-image{
+  width: 420px;     /* keep column width here */
+  height: 100%;
+}
+
 .quick-image img{
-  width:420px;
-  height:100%;
-  object-fit:cover;
+  width: 100%;      /* image fills the column */
+  height: 100%;     /* image fills modal height */
+  object-fit: cover;
+  display: block;
 }
 
 .quick-content{
   padding:40px;
   color:#fff;
+}
+.quick-image{
+  overflow: hidden;
 }
 
 .quick-tag{
