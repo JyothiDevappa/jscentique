@@ -20,7 +20,7 @@ body {
 .new-arrivals-hero {
   min-height: calc(100vh - 80px);
   padding-top: 80px;
-  background: url('../images/Wedding2.webp') center/cover no-repeat;
+  background: url('../images/wedding-grid2.png') center/cover no-repeat;
   position: relative;
 }
 

@@ -1,361 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luxury Perfume Collection</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – J SCENTIQUE</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --beige: #e0d6c3;
-  --dark: #0b0b0b;
-}
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Montserrat', sans-serif;
+      background:#0e0e0e;
+      color:#fff;
+    }
+
+    section{
+      padding:120px 10%;
+    }
+
+    h1,h2{
+      font-family:'Playfair Display', serif;
+      font-weight:600;
+    }
+
+    /* ================= HERO ================= */
+    .about-hero{
+      height:90vh;
+      display:flex;
+      align-items:center;
+    }
+
+    .about-hero span{
+      font-size:11px;
+      letter-spacing:4px;
+      color:#c8a96a;
+    }
+
+    .about-hero h1{
+      font-size:52px;
+      margin:18px 0;
+    }
+
+    .about-hero p{
+      max-width:560px;
+      color:#aaa;
+      line-height:1.8;
+      font-size:15px;
+    }
+
+    /* ================= GRID SECTIONS ================= */
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:90px;
+      align-items:center;
+    }
+
+    .about-grid img{
+      width:100%;
+      height:540px;
+      object-fit:cover;
+    }
+
+    .about-text span{
+      font-size:11px;
+      letter-spacing:3px;
+      color:#c8a96a;
+    }
+
+    .about-text h2{
+      font-size:36px;
+      margin:16px 0;
+    }
+
+    .about-text p{
+      color:#aaa;
+      line-height:1.8;
+      margin-bottom:14px;
+      font-size:14px;
+    }
+
+    .alt-bg{
+      background:#111;
+    }
+
+    /* ================= VALUES ================= */
+    .values{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:40px;
+      text-align:center;
+    }
+
+    .values h3{
+      font-size:14px;
+      letter-spacing:2px;
+      color:#c8a96a;
+      margin-bottom:8px;
+    }
+
+    .values p{
+      font-size:13px;
+      color:#aaa;
+      line-height:1.6;
+    }
+
+    /* ================= QUOTE ================= */
+    .brand-quote{
+      text-align:center;
+      max-width:800px;
+      margin:0 auto;
+    }
+
+    .brand-quote p{
+      font-family:'Playfair Display', serif;
+      font-size:28px;
+      line-height:1.6;
+      color:#ddd;
+    }
+
+    .brand-quote span{
+      display:block;
+      margin-top:20px;
+      font-size:12px;
+      letter-spacing:3px;
+      color:#c8a96a;
+    }
 
 
-a { text-decoration: none; color: inherit; }
+    /* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px){
 
-/* SECTION */
-.new-collection-section {
-  padding: 100px 50px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-title h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin: 0;
-}
-
-.section-title p {
-  font-size: 14px;
-  opacity: 0.7;
-  margin-top: 10px;
-}
-
-/* GRID */
-.new-collection {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-@media (max-width: 992px) {
-  .new-collection { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 576px) {
-  .new-collection { grid-template-columns: 1fr; }
-  .new-collection-section { padding: 60px 20px; }
-}
-
-/* PRODUCT CARD */
-.product-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--dark);
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover { transform: scale(1.02); }
-
-.product-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.product-image img {
-  width: 100%;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover img { transform: scale(1.03); }
-
-/* BADGE */
-.badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  font-size: 11px;
-  padding: 4px 8px;
-  background: #1a1a1a;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: var(--beige);
-}
-
-/* QUICK VIEW BUTTON */
-.quick-view-btn {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: var(--beige);
-  color: var(--dark);
-  border: none;
-  padding: 8px 12px;
-  font-size: 11px;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-.quick-view-btn:hover { background: #d1c3a1; }
-
-/* PRODUCT INFO */
-.product-info {
-  padding: 18px 0;
-}
-
-.product-info h3 {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin: 0 0 4px 0;
-  text-transform: uppercase;
-}
-
-.desc { font-size: 13px; opacity: 0.8; margin-bottom: 4px; }
-.ml { font-size: 12px; opacity: 0.6; margin-bottom: 12px; }
-
-.price-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.price { font-size: 16px; font-weight: 700; }
-
-.buy-now {
-  font-size: 12px;
-  text-transform: uppercase;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease;
-}
-.buy-now:hover { border-bottom-color: var(--beige); }
-
-.add-cart {
-  width: 100%;
-  padding: 10px 0;
-  background: var(--beige);
-  color: var(--dark);
-  font-weight: 700;
-  letter-spacing: 1px;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background 0.3s ease;
-}
-.add-cart:hover { background: #d1c3a1; }
-/* QUICK VIEW MODAL */
-.quick-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-  display: none;
-  z-index: 999;
-}
-
-.quick-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 400px; /* smaller max width for mobile */
-  background: #fff;
-  display: none;
-  z-index: 1000;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-/* Wrapper inside modal */
-.quick-wrapper {
-  display: flex;
-  flex-direction: column; /* stack image + content on mobile */
-  min-height: auto;
-}
-
-.quick-image {
-  width: 100%;
-  max-height: 220px;
-  overflow: hidden;
-}
-
-.quick-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.quick-content {
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #000;
-}
-
-.quick-close {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.quick-wishlist {
-  position: absolute;
-  top: 12px;
-  left: 14px;
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.quick-actions {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.btn-buy {
-  flex: 1; background: var(--dark); color:#fff; border:none; padding:12px; cursor:pointer;
-}
-.btn-cart {
-  flex: 1; border:1px solid var(--dark); background:none; padding:12px; cursor:pointer;
-}
-
-/* MOBILE RESPONSIVE */
-@media(max-width:640px){
-  .quick-modal {
-    width: 90%;
-    max-width: 360px; /* tighter modal for mobile */
+  section{
+    padding:80px 6%;
   }
 
-  .quick-wrapper {
-    flex-direction: column;
+  /* HERO */
+  .about-hero{
+    height:auto;
+    padding-top:120px;
+    padding-bottom:80px;
   }
 
-  .quick-image {
-    width: 100%;
-    max-height: 180px;
+  .about-hero h1{
+    font-size:34px;
+    line-height:1.2;
   }
 
-  .quick-content {
-    width: 100%;
-    padding: 16px;
+  .about-hero p{
+    font-size:14px;
+  }
+
+  /* GRID STACK */
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .about-grid img{
+    height:360px;
+  }
+
+  /* TEXT */
+  .about-text h2{
+    font-size:28px;
+  }
+
+  .about-text p{
+    font-size:13px;
+  }
+
+  /* VALUES */
+  .values{
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
+
+  /* QUOTE */
+  .brand-quote p{
+    font-size:22px;
   }
 }
 
-</style>
+/* ================= SMALL PHONES ================= */
+@media (max-width: 480px){
+
+  section{
+    padding:50px 5%;
+  }
+
+  .about-hero h1{
+    font-size:30px;
+  }
+
+  .values{
+    grid-template-columns:1fr;
+  }
+
+  .brand-quote p{
+    font-size:20px;
+  }
+}
+
+  </style>
 </head>
+
 <body>
 
-<section class="new-collection-section">
-  <div class="section-title">
-    <h2>New Collections</h2>
-    <p>Discover our latest handpicked fragrances</p>
-  </div>
+  <!-- ================= HERO ================= -->
+  <section class="about-hero">
+    <div>
+      <span>ABOUT J SCENTIQUE</span>
+      <h1>Fragrance Crafted With Purpose</h1>
+      <p>
+        J SCENTIQUE is a modern fragrance house devoted to creating
+        refined scents that feel personal, expressive, and timeless.
+        Every creation reflects balance, restraint, and quiet confidence.
+      </p>
+    </div>
+  </section>
 
-  <div class="new-collection">
+  <!-- ================= CRAFT ================= -->
+  <section>
+    <div class="about-grid">
+      <img src="../assets/images/about-image-1.png" alt="Perfume Crafting">
 
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">NEW</span>
-        <img src="../assets/images/img3.png" alt="Perfume 1">
-        <button class="quick-view-btn" onclick="openQuickView(
-          'J SCENTIQUE – Wedding Edition',
-          '₹ 2,499',
-          '100 ML',
-          'Floral • Amber • Musk',
-          'Crafted for unforgettable wedding celebrations.',
-          '../assets/images/Wedding2.webp'
-        )">Quick View</button>
-      </div>
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">100 ML</p>
-        <div class="price-row">
-          <span class="price">₹2,499</span>
-          <a href="#" class="buy-now">Buy Now</a>
-        </div>
-        <button class="add-cart">Add to Cart</button>
+      <div class="about-text">
+        <span>OUR CRAFT</span>
+        <h2>Designed. Tested. Perfected.</h2>
+        <p>
+          Each fragrance begins with careful formulation and months of testing.
+          From first concept to final blend, every note is evaluated for balance,
+          longevity, and character.
+        </p>
+        <p>
+          We believe true luxury is felt, not forced — our fragrances evolve
+          naturally on the skin, revealing depth over time.
+        </p>
       </div>
     </div>
+  </section>
 
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">LIMITED</span>
-        <img src="../assets/images/new.png" alt="Perfume 2">
-        <button class="quick-view-btn" onclick="openQuickView(
-          'J SCENTIQUE – Celebration Night',
-          '₹ 2,299',
-          '75 ML',
-          'Warm Floral • Vanilla',
-          'A soft yet memorable scent for festive nights.',
-          '../assets/images/new.png'
-        )">Quick View</button>
+  <!-- ================= PHILOSOPHY ================= -->
+  <section class="alt-bg">
+    <div class="about-grid">
+      <div class="about-text">
+        <span>OUR PHILOSOPHY</span>
+        <h2>Intentional Ingredients</h2>
+        <p>
+          Only high-grade fragrance oils and carefully selected accords
+          are used in our formulations. No unnecessary additives,
+          no overpowering blends.
+        </p>
+        <p>
+          Every composition is designed to suit modern lifestyles
+          and diverse climates, ensuring comfort and performance.
+        </p>
       </div>
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">75 ML</p>
-        <div class="price-row">
-          <span class="price">₹2,299</span>
-          <a href="#" class="buy-now">Buy Now</a>
-        </div>
-        <button class="add-cart">Add to Cart</button>
+
+      <img src="../assets/images/about-image-2.png" alt="Fragrance Ingredients">
+    </div>
+  </section>
+
+  <!-- ================= VALUES ================= -->
+  <section>
+    <div class="values">
+      <div>
+        <h3>Premium Oils</h3>
+        <p>High-quality fragrance oils selected for richness and longevity.</p>
+      </div>
+
+      <div>
+        <h3>Skin Conscious</h3>
+        <p>Balanced formulations crafted for everyday wear.</p>
+      </div>
+
+      <div>
+        <h3>Modern Craft</h3>
+        <p>Designed with precision and contemporary techniques.</p>
+      </div>
+
+      <div>
+        <h3>Authentic Blends</h3>
+        <p>Every scent tells a distinct and memorable story.</p>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- QUICK VIEW MODAL -->
-<div class="quick-overlay" id="quickOverlay" onclick="closeQuickView()"></div>
-<div class="quick-modal" id="quickModal">
-  <button class="quick-close" onclick="closeQuickView()">×</button>
-  <button class="quick-wishlist" onclick="toggleHeart(this)">♡</button>
-  <div class="quick-wrapper">
-    <div class="quick-image"><img id="qImage"></div>
-    <div class="quick-content">
-      <span class="quick-tag">NEW ARRIVAL</span>
-      <h2 id="qName"></h2>
-      <p class="quick-notes" id="qNotes"></p>
-      <p class="quick-desc" id="qDesc"></p>
-      <div class="quick-meta">
-        <span id="qSize"></span>
-        <strong id="qPrice"></strong>
-      </div>
-      <div class="quick-actions">
-        <button class="btn-buy">Buy Now</button>
-        <button class="btn-cart">Add to Bag</button>
-      </div>
+  <!-- ================= BRAND QUOTE ================= -->
+  <section class="alt-bg">
+    <div class="brand-quote">
+      <p>
+        “Perfume is not just a fragrance — it is how you are remembered.”
+      </p>
+      <span>— J SCENTIQUE</span>
     </div>
-  </div>
-</div>
-
-
+  </section>
 
 </body>
 </html>

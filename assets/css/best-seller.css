@@ -13,7 +13,7 @@ body {
 /* ================= HERO ================= */
 .best-seller-hero {
   height: 100vh;
-  background: url('../images/about.png') center/cover no-repeat;
+  background: url('../images/new-product1.png') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -23,10 +23,46 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.3));
+  background: linear-gradient(to right, rgba(0,0,0,.80), rgba(0,0,0,.3));
 }
 
+
 .hero-content {
+  position: relative;
+  max-width: 520px;
+}
+
+/* SMALL LABEL — CONFIDENT, NOT WEAK */
+.hero-content span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  font-weight: 600;
+  color: #c8a96a;
+}
+
+/* 🔥 MAIN HEADLINE — BOLD & BRANDED */
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 600;            /* bold but elegant */
+  line-height: 1.15;
+  margin: 18px 0 14px;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+
+/* DESCRIPTION — SOFT SUPPORT TEXT */
+.hero-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: #b5b5b5;
+  max-width: 420px;
+}
+
+/* .hero-content {
   position: relative;
   max-width: 520px;
 }
@@ -46,18 +82,43 @@ body {
 .hero-content p {
   font-size: 14px;
   color: #aaa;
-}
+} */
+
+
+
 
 .hero-btn {
   display: inline-block;
   margin-top: 30px;
   padding: 14px 36px;
-  border: 1px solid rgba(255,255,255,.4);
-  color: #fff;
+  border-radius: 999px;
+
+  background: #fff;                  /* solid white */
+  color: #000;
   text-decoration: none;
   font-size: 12px;
   letter-spacing: 2px;
+
+  border: none;
+  position: relative;
+
+  transition:
+    background .3s ease,
+    color .3s ease,
+    transform .3s ease;
 }
+
+/* 🔥 HOVER — RICH BEIGE / GOLD */
+.hero-btn:hover {
+  background: #c8a96a;               /* luxury gold-beige */
+  color: #000;
+  transform: translateY(-1px);
+}
+
+
+
+
+
 
 /* ================= PRODUCTS ================= */
 .products {
@@ -320,8 +381,7 @@ body {
 
 
 
-
-/* WISHLIST — ALWAYS VISIBLE */
+/* DEFAULT */
 .wishlist-btn {
   position: absolute;
   top: 14px;
@@ -334,7 +394,6 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  opacity: 1;                 /* 🔥 always visible */
   transition: background .3s, border .3s;
 }
 
@@ -344,9 +403,20 @@ body {
   fill: none;
   stroke: #fff;
   stroke-width: 1.6;
+  transition: fill .3s, stroke .3s;
 }
 
-/* ACTIVE STATE */
+/* HOVER — outline only */
+.wishlist-btn:hover {
+  background: rgba(255,255,255,.15);
+  border-color: rgba(255,255,255,.6);
+}
+
+.wishlist-btn:hover svg {
+  stroke: #fff;
+}
+
+/* ACTIVE — FILLED HEART */
 .wishlist-btn.active {
   background: #c8a96a;
   border-color: #c8a96a;
@@ -357,12 +427,43 @@ body {
   stroke: #000;
 }
 
-/* subtle hover – not required but premium */
-.wishlist-btn:hover {
-  background: rgba(200,169,106,.85);
+/* ACTIVE + HOVER — KEEP ACTIVE */
+.wishlist-btn.active:hover {
+  background: #c8a96a;
   border-color: #c8a96a;
 }
 
-.wishlist-btn:hover svg {
-  stroke: #000;
+
+
+
+
+.brand-values{
+  padding:100px 8%;
+  background:#0e0e0e;
+  text-align:center;
+}
+
+.brand-values h2{
+  font-family:'Playfair Display', serif;
+  font-size:34px;
+  margin-bottom:60px;
+}
+
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+
+.values-grid h3{
+  font-size:14px;
+  letter-spacing:2px;
+  color:#c8a96a;
+  margin-bottom:10px;
+}
+
+.values-grid p{
+  font-size:13px;
+  color:#aaa;
+  line-height:1.6;
 }

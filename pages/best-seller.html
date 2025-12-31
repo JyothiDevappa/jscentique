@@ -5,12 +5,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Best Sellers – J Scentique</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/best-seller.css">
 </head>
 
 <body>
+
+    
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <button class="website-btn">
+        <a href="http://www.jscentique.com" target="_blank">www.jscentique.com</a>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
+        </li>
+        <li class="nav-item">
+          <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
+        </li>
+        <li class="nav-item">
+          <a href="../pages/contact.html" class="nav-link">About</a>
+        </li>
+      </ul>
+      <!-- Hamburger Menu -->
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <ul class="nav-menu-mobile" id="navMenuMobile">
+      <li class="nav-item">
+        <a href="../index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
+      </li>
+      <li class="nav-item">
+        <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
+      </li>
+      <li class="nav-item">
+        <a href="../pages/contact.html" class="nav-link">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  
 
   <!-- ================= HERO (OLD STYLE KEPT) ================= -->
   <section class="best-seller-hero">
@@ -32,13 +83,15 @@
       <p>Our most loved fragrances, chosen again and again.</p>
     </div>
 
+
+
+
     <div class="grid">
-
       <!-- PRODUCT -->
-      <article class="product">
 
+      <article class="product">
         <div class="image">
-          <img src="../assets/images/grid1.png" alt="J Scentique Signature">
+          <img src="../assets/images/grid3.png" alt="J Scentique Signature">
 
           <!-- QUICK VIEW ICON -->
           <button class="quick-view" onclick="openQuickView(
@@ -47,19 +100,20 @@
           '50 ML',
           'Floral · Musk',
           'A refined everyday fragrance crafted for confident women. Soft florals blend with clean musk to create a scent that feels intimate, elegant, and timeless.',
-          '../assets/images/grid1.png'
+          '../assets/images/grid3.png'
         )">+</button>
 
 
-         <div class="wishlist-btn">
-  <!-- Outline Heart -->
-  <svg viewBox="0 0 24 24">
-    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 
-             4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 
-             14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 
-             6.86-8.55 11.54L12 21.35z"/>
-  </svg>
-</div>
+          <div class="wishlist-btn" onclick="toggleWishlist(this)">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+             2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+             C13.09 3.81 14.76 3 16.5 3
+             19.58 3 22 5.42 22 8.5
+             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </div>
+
 
 
         </div>
@@ -81,7 +135,104 @@
 
       </article>
 
+
+      <article class="product">
+        <div class="image">
+          <img src="../assets/images/grid3.png" alt="J Scentique Signature">
+
+          <!-- QUICK VIEW ICON -->
+          <button class="quick-view" onclick="openQuickView(
+          'J SCENTIQUE – Signature',
+          '₹ 1,200',
+          '50 ML',
+          'Floral · Musk',
+          'A refined everyday fragrance crafted for confident women. Soft florals blend with clean musk to create a scent that feels intimate, elegant, and timeless.',
+          '../assets/images/grid3.png'
+        )">+</button>
+
+
+          <div class="wishlist-btn" onclick="toggleWishlist(this)">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+             2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+             C13.09 3.81 14.76 3 16.5 3
+             19.58 3 22 5.42 22 8.5
+             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </div>
+
+
+
+        </div>
+
+        <div class="info">
+          <h3>J SCENTIQUE</h3>
+          <span>Signature · 50 ML</span>
+
+          <div class="rating">★★★★☆ <small>(124)</small></div>
+
+          <strong>₹ 1,200</strong>
+
+          <!-- ACTIONS -->
+          <div class="actions">
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Bag</button>
+          </div>
+        </div>
+
+      </article>
+
+
       <!-- DUPLICATE SAME STRUCTURE -->
+      <article class="product">
+        <div class="image">
+          <img src="../assets/images/grid3.png" alt="J Scentique Signature">
+
+          <!-- QUICK VIEW ICON -->
+          <button class="quick-view" onclick="openQuickView(
+          'J SCENTIQUE – Signature',
+          '₹ 1,200',
+          '50 ML',
+          'Floral · Musk',
+          'A refined everyday fragrance crafted for confident women. Soft florals blend with clean musk to create a scent that feels intimate, elegant, and timeless.',
+          '../assets/images/grid3.png'
+        )">+</button>
+
+
+          <div class="wishlist-btn" onclick="toggleWishlist(this)">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+             2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+             C13.09 3.81 14.76 3 16.5 3
+             19.58 3 22 5.42 22 8.5
+             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </div>
+
+
+
+        </div>
+
+        <div class="info">
+          <h3>J SCENTIQUE</h3>
+          <span>Signature · 50 ML</span>
+
+          <div class="rating">★★★★☆ <small>(124)</small></div>
+
+          <strong>₹ 1,200</strong>
+
+          <!-- ACTIONS -->
+          <div class="actions">
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Bag</button>
+          </div>
+        </div>
+
+      </article>
+
+
+
+
 
     </div>
   </section>
@@ -117,6 +268,12 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+
 
   <script src="../assets/javascript/bestseller.js"></script>
 </body>
