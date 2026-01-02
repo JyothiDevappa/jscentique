@@ -5,119 +5,170 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxury Perfume</title>
+
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/fonts/font.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- CART UI (ONLY ADDITION) -->
+  <style>
+
+
+.navbar.menu-open {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(6px);
+}
+
+    .nav-cart {
+      position: relative;
+      margin-left: 18px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .nav-cart i {
+      font-size: 18px;
+    }
+
+    .nav-cart span {
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      background: #c8a96a;
+      color: #000;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 50%;
+      font-weight: 600;
+    }
+
+    .cart-popup {
+      position: fixed;
+      top: 90px;
+      right: 30px;
+      width: 280px;
+      background: #111;
+      border: 1px solid #333;
+      padding: 16px;
+      z-index: 9999;
+      display: none;
+      animation: slideFade .3s ease;
+    }
+
+    .cart-popup h4 {
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .cart-popup p {
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    @keyframes slideFade {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ================= NAVBAR ================= -->
   <nav class="navbar">
     <div class="navbar-container">
       <button class="website-btn">
         <a href="http://www.jscentique.com" target="_blank">www.jscentique.com</a>
       </button>
+
       <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="pages/best-seller.html" class="nav-link">Best Seller</a>
-        </li>
-        <li class="nav-item">
-          <a href="/pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-        </li>
-        <li class="nav-item">
-          <a href="/pages/contact.html" class="nav-link">About</a>
-        </li>
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item"><a href="pages/best-seller.html" class="nav-link">Best Seller</a></li>
+        <li class="nav-item"><a href="pages/new-arrivals.html" class="nav-link">New Arrivals</a></li>
+        <li class="nav-item"><a href="pages/contact.html" class="nav-link">About</a></li>
       </ul>
-      <!-- Hamburger Menu -->
+
+      <!-- CART ICON (ADDED ONLY) -->
+      <div class="nav-cart" onclick="redirectCart()">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="cartCount">0</span>
+      </div>
+
       <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
-    <!-- Mobile Menu -->
-    <ul class="nav-menu-mobile" id="navMenuMobile">
-      <li class="nav-item">
-        <a href="index.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item">
-        <a href="pages/best-seller.html" class="nav-link">Best Seller</a>
-      </li>
-      <li class="nav-item">
-        <a href="pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-      </li>
-      <li class="nav-item">
-        <a href="pages/contact.html" class="nav-link">Contact</a>
-      </li>
-    </ul>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- ================= HERO ================= -->
   <section class="hero" id="home">
     <div class="hero-content">
-
       <div class="hero-text">
         <h1>J SCENTIQUE</h1>
         <p>Where elegance meets timeless fragrance..</p>
-        <!-- Full line border button with arrow -->
         <a href="pages/new-arrivals.html" class="hero-btn">Check New Arrivals →</a>
       </div>
-
     </div>
   </section>
 
+  <!-- ================= NEW COLLECTION ================= -->
+  <section class="new-collection-section">
+    <div class="section-title">
+      <h2>New Collections</h2>
+      <p>Discover our latest handpicked fragrances</p>
+    </div>
 
+    <div class="new-collection">
 
-
-
-
-<!-- ================= NEW COLLECTION SECTION ================= -->
-<section class="new-collection-section">
-  <div class="section-title">
-    <h2>New Collections</h2>
-    <p>Discover our latest handpicked fragrances</p>
-  </div>
-
-  <div class="new-collection">
-
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">NEW</span>
-        <img src="assets/images/new-product-1.png" alt="Perfume 1">
-        <button class="quick-view-btn" onclick="openQuickView(
+      <!-- PRODUCT 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <span class="badge">NEW</span>
+          <img src="assets/images/new-product-1.png">
+          <button class="quick-view-btn" onclick="openQuickView(
           'J SCENTIQUE – Wedding Edition',
           '₹ 2,499',
           '100 ML',
           'Floral • Amber • Musk',
           'Crafted for unforgettable wedding celebrations.',
-          'assets/images/new-product-1'
+          'assets/images/new-product-1.png'
         )">Quick View</button>
-      </div>
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">100 ML</p>
-        <div class="price-row">
-          <span class="price">₹2,499</span>
-          <a href="#" class="buy-now">Buy Now</a>
         </div>
-        <button class="add-cart">Add to Cart</button>
-      </div>
-    </div>
+        <div class="product-info">
+          <h3>J SCENTIQUE</h3>
+          <p class="ml">100 ML</p>
+          <div class="price-row">
+            <span class="price">₹2,499</span>
+            <a href="#" class="buy-now" data-name="Wedding Edition" data-price="2499" data-size="100 ML"
+              data-image="assets/images/new-product-1.png" onclick="buyNow(event,this)">
+              Buy Now
+            </a>
+          </div>
 
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">NEW</span>
-        <img src="assets/images/new-product-2.png" alt="Perfume 2">
-        <button class="quick-view-btn" onclick="openQuickView(
+          <a href="#" class="add-cart" data-name="Wedding Edition" data-price="2499" data-size="100 ML"
+            data-image="assets/images/new-product-1.png" onclick="addToCart(event,this)">
+            Add to Cart
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUCT 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <span class="badge">NEW</span>
+          <img src="assets/images/new-product-2.png">
+          <button class="quick-view-btn" onclick="openQuickView(
           'J SCENTIQUE – Celebration Night',
           '₹ 2,299',
           '75 ML',
@@ -125,291 +176,122 @@
           'A soft yet memorable scent for festive nights.',
           'assets/images/new-product-2.png'
         )">Quick View</button>
-      </div>
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">75 ML</p>
-        <div class="price-row">
-          <span class="price">₹2,299</span>
-          <a href="#" class="buy-now">Buy Now</a>
         </div>
-        <button class="add-cart">Add to Cart</button>
+        <div class="product-info">
+          <h3>J SCENTIQUE</h3>
+          <p class="ml">75 ML</p>
+          <div class="price-row">
+            <span class="price">₹2,299</span>
+            <a href="#" class="buy-now" data-name="Wedding Edition" data-price="2499" data-size="100 ML"
+              data-image="assets/images/new-product-1.png" onclick="buyNow(event,this)">
+              Buy Now
+            </a>
+          </div>
+
+          <a href="#" class="add-cart" data-name="Celebration Night" data-price="2299" data-size="75 ML"
+            data-image="assets/images/new-product-2.png" onclick="addToCart(event,this)">
+            Add to Cart
+          </a>
+        </div>
       </div>
-    </div>
 
-
-    
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">NEW</span>
-        <img src="assets/images/new-product-3.png" alt="Perfume 2">
-        <button class="quick-view-btn" onclick="openQuickView(
-          'J SCENTIQUE – Celebration Night',
+      <!-- PRODUCT 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <span class="badge">NEW</span>
+          <img src="assets/images/new-product-3.png">
+          <button class="quick-view-btn" onclick="openQuickView(
+          'J SCENTIQUE – Signature Bloom',
           '₹ 2,299',
           '75 ML',
           'Warm Floral • Vanilla',
-          'A soft yet memorable scent for festive nights.',
+          'Elegant everyday fragrance.',
           'assets/images/new-product-3.png'
         )">Quick View</button>
-      </div>
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">75 ML</p>
-        <div class="price-row">
-          <span class="price">₹2,299</span>
-          <a href="#" class="buy-now">Buy Now</a>
         </div>
-        <button class="add-cart">Add to Cart</button>
+        <div class="product-info">
+          <h3>J SCENTIQUE</h3>
+          <p class="ml">75 ML</p>
+          <div class="price-row">
+            <span class="price">₹2,299</span>
+            <a href="#" class="buy-now" data-name="Wedding Edition" data-price="2499" data-size="100 ML"
+              data-image="assets/images/new-product-1.png" onclick="buyNow(event,this)">
+              Buy Now
+            </a>
+          </div>
+
+          <a href="#" class="add-cart" data-name="Signature Bloom" data-price="2299" data-size="75 ML"
+            data-image="assets/images/new-product-3.png" onclick="addToCart(event,this)">
+            Add to Cart
+          </a>
+        </div>
       </div>
-    </div>
 
 
-    
-  </div>
-</section>
+      <!-- ================= QUICK VIEW ================= -->
 
-<!-- QUICK VIEW MODAL -->
 <div class="quick-overlay" id="quickOverlay" onclick="closeQuickView()"></div>
+
 <div class="quick-modal" id="quickModal">
   <button class="quick-close" onclick="closeQuickView()">×</button>
-  <button class="quick-wishlist" onclick="toggleHeart(this)">♡</button>
+  <button class="quick-wishlist" onclick="toggleHeart(this)">
+    <i class="fa-regular fa-heart"></i>
+  </button>
+
   <div class="quick-wrapper">
-    <div class="quick-image"><img id="qImage"></div>
+    <!-- IMAGE -->
+    <div class="quick-image">
+      <img id="qImage" src="" alt="">
+    </div>
+
+    <!-- CONTENT -->
     <div class="quick-content">
-      <span class="quick-tag">NEW ARRIVAL</span>
+      <span class="quick-tag">NEW</span>
       <h2 id="qName"></h2>
+
       <p class="quick-notes" id="qNotes"></p>
-      <p class="quick-desc" id="qDesc"></p>
+
       <div class="quick-meta">
         <span id="qSize"></span>
         <strong id="qPrice"></strong>
       </div>
+
+      <p class="quick-desc" id="qDesc"></p>
+
       <div class="quick-actions">
         <button class="btn-buy">Buy Now</button>
-        <button class="btn-cart">Add to Bag</button>
+        <button class="btn-cart">Add to Cart</button>
       </div>
     </div>
   </div>
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="video-section" id="coming-soon">
-  <video class="bg-video" autoplay muted loop playsinline>
-    <source src="assets/videos/vid.mp4" type="video/mp4">
-  </video>
-
-  <div class="video-overlay">
-
-    <!-- Mystery tagline -->
-    <p class="video-top-line">Coming Soon… The Secret You’ve Been Waiting For</p>
-
-    <!-- Divider -->
-    <span class="video-divider"></span>
-
-    <!-- Main heading -->
-    <h2 class="video-text">Crafted to Be Remembered</h2>
-
-    <!-- Countdown Timer -->
-    <div class="countdown-timer" id="countdown">
-      <span id="days">00</span> :
-      <span id="hours">00</span> :
-      <span id="minutes">00</span> :
-      <span id="seconds">00</span>
-    </div>
-
-    <!-- Social Proof -->
-    <p class="social-proof">Be among the first to see it</p>
-
-    <!-- Notify Me (minimal, no button) -->
-    <div class="notify-wrapper">
-      <span class="notify-label">Notify me</span>
-      <input type="email" placeholder="your@email.com" />
-      <span class="notify-arrow">→</span>
-    </div>
-
-   
-    <!-- Social Links -->
-    <div class="video-socials">
-      <a href="#">Instagram</a>
-      <span>•</span>
-      <a href="#">YouTube</a>
-      <span>•</span>
-      <a href="#">X</a>
-    </div>
-
-    <!-- Scroll arrow -->
-    <div class="video-arrow"></div>
-
-    <!-- Sparkles -->
-    <div class="particle" style="top:20%; left:10%;"></div>
-    <div class="particle" style="top:50%; left:30%;"></div>
-    <div class="particle" style="top:80%; left:70%;"></div>
-    <div class="particle" style="top:35%; left:80%;"></div>
-
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-<script>
-  // Set launch date (example: 3 days from now)
-  const launchDate = new Date();
-  launchDate.setDate(launchDate.getDate() + 3);
-
-  const daysEl = document.getElementById('days');
-  const hoursEl = document.getElementById('hours');
-  const minutesEl = document.getElementById('minutes');
-  const secondsEl = document.getElementById('seconds');
-
-  function updateCountdown() {
-    const now = new Date();
-    const diff = launchDate - now;
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    daysEl.textContent = days.toString().padStart(2, '0');
-    hoursEl.textContent = hours.toString().padStart(2, '0');
-    minutesEl.textContent = minutes.toString().padStart(2, '0');
-    secondsEl.textContent = seconds.toString().padStart(2, '0');
-  }
-
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
-</script>
-
-
-
-  <button id="scrollArrow" class="scroll-arrow">
-    <span class="arrow"></span>
-  </button>
-
-
-
-
-
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter">
-    <div class="newsletter-inner">
-      <h2>Stay in the World of Fine Fragrance</h2>
-      <p>Be the first to discover new arrivals, exclusive offers & signature scents.</p>
-
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
     </div>
   </section>
 
+  <!-- QUICK VIEW MODAL (UNCHANGED) -->
+  <div class="quick-overlay" id="quickOverlay" onclick="closeQuickView()"></div>
+  <div class="quick-modal" id="quickModal">...</div>
 
-  <!-- FOOTER -->
+  <!-- CART POPUP -->
+  <div class="cart-popup" id="cartPopup">
+    <h4>Added to Cart</h4>
+    <p id="cartPopupText"></p>
+  </div>
 
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-container">
-
-      <!-- BRAND -->
-      <div class="footer-col footer-brand">
-        <h3 class="footer-logo">J SCENTIQUE</h3>
-        <span class="footer-divider"></span>
-        <p class="footer-about">
-          Crafting timeless fragrances inspired by elegance, passion, and individuality.
-          Discover scents that leave a lasting impression.
-        </p>
-      </div>
-
-      <!-- EXPLORE -->
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="pages/best-seller.html">Shop</a></li>
-          <li><a href="pages/new-arrivals.html">New Arrivals</a></li>
-          <li><a href="pages/about.html">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- CUSTOMER CARE -->
-      <div class="footer-col">
-        <h4>Customer Care</h4>
-        <ul>
-          <li><a href="#">Shipping & Delivery</a></li>
-          <li><a href="#">Returns & Refunds</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">FAQs</a></li>
-        </ul>
-      </div>
-
-      <!-- CONTACT -->
-      <div class="footer-col footer-contact">
-        <h4>Contact Us</h4>
-        <p>Bengaluru, Karnataka, India</p>
-        <p>+91 98765 43210</p>
-        <p>support@jscentique.in</p>
-
-        <div class="footer-socials">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- NEWSLETTER -->
-    <div class="footer-newsletter-wide">
-      <h4>Stay Connected</h4>
-      <p>Exclusive drops & wedding season offers</p>
-
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email address" />
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-
-    <!-- TRUST -->
-    <div class="footer-trust">
-      <p>Authentic fragrances • Secure payments • Pan-India delivery</p>
-    </div>
-
-    <!-- BOTTOM -->
-    <div class="footer-bottom">
-      <p>© 2025 J SCENTIQUE. All rights reserved.</p>
-    </div>
-  </footer>
-
-
-  <script src="assets/javascript/bestseller.js"></script>
-  <script src="assets/javascript/index.js"></script>
+ 
 
 
 
+
+
+<script src="assets/javascript/navbar.js"></script>
+
+<script src="assets/javascript/index.js"></script>
 
 
 </body>
+
 
 </html>

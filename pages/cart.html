@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart – J SCENTIQUE</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+
+  <style>
+    .cart-page {
+      padding: 120px 8% 80px;
+      color: #fff;
+    }
+
+    .cart-title {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 25px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+    }
+
+    .cart-item img {
+      width: 110px;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .cart-info h4 {
+      font-size: 18px;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .cart-info p {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .cart-price {
+      margin-left: auto;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .cart-summary {
+      margin-top: 40px;
+      border-top: 1px solid var(--border);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-total {
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    .checkout-btn {
+      padding: 14px 40px;
+      border: 1px solid var(--primary);
+      background: var(--primary);
+      color: #000;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: .3s;
+    }
+
+    .checkout-btn:hover {
+      background: transparent;
+      color: var(--primary);
+    }
+
+    /* ===== Quantity & Remove (Luxury Style) ===== */
+
+    .cart-actions {
+      margin-top: 12px;
+    }
+
+    .qty-box {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      height: 34px;
+    }
+
+    .qty-box button {
+      width: 32px;
+      height: 100%;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .qty-box button:hover {
+      background: var(--primary);
+      color: #000;
+    }
+
+    .qty-box span {
+      width: 36px;
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .remove-btn {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      background: none;
+      border: none;
+      color: #888;
+      cursor: pointer;
+      transition: 0.3s;
+      padding: 0;
+    }
+
+    .remove-btn:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="cart-page">
+  <h1 class="cart-title">Your Cart</h1>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-summary">
+    <div class="cart-total" id="cartTotal">Total: ₹0</div>
+    <a href="../pages/checkout.html" class="checkout-btn">
+      Proceed to Checkout
+    </a>
+  </div>
+</section>
+
+<script src="../assets/javascript/cart.js"></script>
+</body>
+</html>

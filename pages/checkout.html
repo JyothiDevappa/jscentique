@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout – J SCENTIQUE</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+
+  <style>
+    .checkout-page {
+      padding: 120px 8% 80px;
+      color: #fff;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .checkout-title {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+    }
+
+    .checkout-box {
+      border: 1px solid var(--border);
+      padding: 30px;
+      background: #111;
+    }
+
+    .order-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 15px;
+    }
+
+    .order-item img {
+      width: 90px;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .order-item h4 {
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .order-item p {
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .order-price {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .total {
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    .place-order {
+      width: 100%;
+      margin-top: 30px;
+      padding: 16px;
+      background: var(--primary);
+      color: #000;
+      border: none;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      background: #0b0b0b;
+      border: 1px solid var(--border);
+      color: #fff;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="checkout-page">
+  <h1 class="checkout-title">Checkout</h1>
+
+  <div class="checkout-grid">
+
+    <!-- CUSTOMER INFO -->
+    <div class="checkout-box">
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email Address">
+      <input type="text" placeholder="Phone Number">
+      <input type="text" placeholder="Shipping Address">
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="checkout-box">
+      <div id="checkoutItems"></div>
+      <div class="total" id="checkoutTotal"></div>
+      <button class="place-order">Place Order</button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const checkoutItems = document.getElementById("checkoutItems");
+  const checkoutTotal = document.getElementById("checkoutTotal");
+
+  let items = [];
+  let total = 0;
+
+  // 1️⃣ Buy Now flow
+  const singleItem = JSON.parse(localStorage.getItem("checkoutItem"));
+
+  if (singleItem) {
+    items = [singleItem];
+    localStorage.removeItem("checkoutItem");
+  } 
+  // 2️⃣ Cart flow
+  else {
+    items = JSON.parse(localStorage.getItem("cart")) || [];
+  }
+
+  items.forEach(item => {
+    total += item.price * item.qty;
+
+    checkoutItems.innerHTML += `
+      <div class="order-item">
+        <img src="${item.image}">
+        <div>
+          <h4>${item.name}</h4>
+          <p>${item.size}</p>
+          <p>Qty: ${item.qty}</p>
+          <div class="order-price">₹${item.price}</div>
+        </div>
+      </div>
+    `;
+  });
+
+  checkoutTotal.innerText = `Total: ₹${total}`;
+</script>
+
+</body>
+</html>
