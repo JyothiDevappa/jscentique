@@ -4,310 +4,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Arrivals – Luxury Perfume</title>
-  <link rel="stylesheet" href="../assets/css/new-arrivals.css" />
+  <title>New Arrivals – J Scentique</title>
+
+  <!-- MAIN CSS ONLY -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-
-    
-  <!-- NAVBAR -->
+  <!-- ================= NAVBAR ================= -->
   <nav class="navbar">
     <div class="navbar-container">
       <button class="website-btn">
         <a href="http://www.jscentique.com" target="_blank">www.jscentique.com</a>
       </button>
+
       <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="../index.html" class="nav-link active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/contact.html" class="nav-link">About</a>
-        </li>
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="best-seller.html" class="nav-link">Best Seller</a></li>
+        <li class="nav-item"><a href="new-arrivals.html" class="nav-link active">New Arrivals</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">About</a></li>
       </ul>
-      <!-- Hamburger Menu -->
+
+      <a href="../wishlist.html" class="nav-wishlist">
+        <i class="fa-regular fa-heart"></i>
+        <span id="wishlistCount">0</span>
+      </a>
+
+      <a href="cart.html" class="nav-cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="cartCount">0</span>
+      </a>
+
       <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
-    <!-- Mobile Menu -->
-    <ul class="nav-menu-mobile" id="navMenuMobile">
-      <li class="nav-item">
-        <a href="../index.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item">
-        <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
-      </li>
-      <li class="nav-item">
-        <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-      </li>
-      <li class="nav-item">
-        <a href="../pages/contact.html" class="nav-link">Contact</a>
-      </li>
-    </ul>
   </nav>
 
 
-<!-- ================= HERO ================= -->
-<section class="new-arrivals-hero">
-  <div class="new-arrivals-overlay"></div>
-  <div class="new-arrivals-hero-content">
-    <span class="badge-1">NEW ARRIVALS</span>
-    <h1 class="new-arrivals-title">Wedding Season Exclusives</h1>
-    <p class="new-arrivals-desc">Fresh arrivals crafted for celebrations worth remembering.</p>
-    <a class="new-arrivals-shop-btn">Explore Collection</a>
-  </div>
-</section>
 
-<!-- ================= SECTION 1 ================= -->
-<section class="new-arrivals-products">
-  <div class="new-arrivals-products-header">
-    <h2 class="new-arrivals-products-title">Wedding & Celebration Collection</h2>
-    <p class="new-arrivals-products-subtitle">
-      Timeless fragrances curated for unforgettable moments.
-    </p>
+  <!-- ================= NEW ARRIVALS ================= -->
+<section class="new-collection-section">
+  <div class="section-title">
+    <h2>New Arrivals</h2>
+    <p>Fresh launches crafted for unforgettable moments.</p>
   </div>
 
-  <div class="new-arrivals-grid">
+  <div class="new-collection">
 
     <!-- PRODUCT 1 -->
-    <div class="new-arrivals-card">
-      <span class="new-arrivals-badge">NEW</span>
-      <button class="card-wishlist" onclick="toggleHeart(this)">♡</button>
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">NEW</span>
 
-      <div class="arrival-image-wrap">
-        <img src="../assets/images/wedding-grid1.avif">
+        <button class="product-wishlist"
+          data-id="arrival-01"
+          data-name="Wedding Edition"
+          data-price="2499"
+          data-size="100 ML"
+          data-image="../assets/images/wedding-grid1.png"
+          onclick="toggleProductWishlist(this)">
+          <i class="fa-regular fa-heart"></i>
+        </button>
 
-        <button class="arrival-quick-view-btn" onclick="openArrivalQuickView(
-          'J SCENTIQUE – Wedding Edition',
+        <img src="../assets/images/wedding-grid1.png">
+
+        <button class="quick-view-btn" onclick="openQuickView(
+          'Wedding Edition',
           '₹ 2,499',
           '100 ML',
           'Floral • Amber • Musk',
           'Crafted for unforgettable wedding celebrations.',
-          '../assets/images/wedding-grid1.avif'
+          '../assets/images/wedding-grid1.png'
         )">Quick View</button>
       </div>
 
-      <div class="new-arrivals-info">
-        <h4>J SCENTIQUE</h4>
-        <p>100 ML</p>
-        <strong>₹ 2,499</strong>
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">100 ML</p>
 
-        <div class="product-actions">
-          <button class="product-buy">Buy Now</button>
-          <button class="product-cart">Add to Bag</button>
+        <div class="price-row">
+          <span class="price">₹2,499</span>
+          <a href="#" class="buy-now"
+            data-id="arrival-01"
+            data-name="Wedding Edition"
+            data-price="2499"
+            data-size="100 ML"
+            data-image="../assets/images/wedding-grid1.png">
+            Buy Now
+          </a>
         </div>
+
+        <a href="#" class="add-cart"
+          data-id="arrival-01"
+          data-name="Wedding Edition"
+          data-price="2499"
+          data-size="100 ML"
+          data-image="../assets/images/wedding-grid1.png">
+          Add to Cart
+        </a>
       </div>
     </div>
 
     <!-- PRODUCT 2 -->
-    <div class="new-arrivals-card">
-      <span class="new-arrivals-badge">LIMITED</span>
-      <button class="card-wishlist" onclick="toggleHeart(this)">♡</button>
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">LIMITED</span>
 
-      <div class="arrival-image-wrap">
+        <button class="product-wishlist"
+          data-id="arrival-02"
+          data-name="Celebration Night"
+          data-price="2299"
+          data-size="75 ML"
+          data-image="../assets/images/wedding-grid2.png"
+          onclick="toggleProductWishlist(this)">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
         <img src="../assets/images/wedding-grid2.png">
 
-        <button class="arrival-quick-view-btn" onclick="openArrivalQuickView(
-          'J SCENTIQUE – Celebration Night',
+        <button class="quick-view-btn" onclick="openQuickView(
+          'Celebration Night',
           '₹ 2,299',
           '75 ML',
           'Warm Floral • Vanilla',
           'A soft yet memorable scent for festive nights.',
-          '../assets/images/new-product-3.png'
+          '../assets/images/wedding-grid2.png'
         )">Quick View</button>
       </div>
 
-      <div class="new-arrivals-info">
-        <h4>J SCENTIQUE</h4>
-        <p>75 ML</p>
-        <strong>₹ 2,299</strong>
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">75 ML</p>
 
-        <div class="product-actions">
-          <button class="product-buy">Buy Now</button>
-          <button class="product-cart">Add to Bag</button>
+        <div class="price-row">
+          <span class="price">₹2,299</span>
+          <a href="#" class="buy-now"
+            data-id="arrival-02"
+            data-name="Celebration Night"
+            data-price="2299"
+            data-size="75 ML"
+            data-image="../assets/images/wedding-grid2.png">
+            Buy Now
+          </a>
         </div>
-      </div>
-    </div>
 
-  </div>
-</section>
-
-<!-- ================= ARRIVAL QUICK VIEW MODAL ================= -->
-<div class="arrival-quick-overlay" id="arrivalQuickOverlay" onclick="closeArrivalQuickView()"></div>
-
-<div class="arrival-quick-modal" id="arrivalQuickModal">
-  <button class="arrival-quick-close" onclick="closeArrivalQuickView()">×</button>
-  <button class="arrival-quick-wishlist" onclick="toggleHeart(this)">♡</button>
-
-  <div class="arrival-quick-wrapper">
-    <div class="arrival-quick-image">
-      <img id="arrivalQNameImage">
-    </div>
-
-    <div class="arrival-quick-content">
-      <span class="arrival-quick-tag">NEW ARRIVAL</span>
-      <h2 id="arrivalQName"></h2>
-      <p class="arrival-quick-notes" id="arrivalQNotes"></p>
-      <p class="arrival-quick-desc" id="arrivalQDesc"></p>
-
-      <div class="arrival-quick-meta">
-        <span id="arrivalQSize"></span>
-        <strong id="arrivalQPrice"></strong>
-      </div>
-
-      <div class="arrival-quick-actions">
-        <button class="btn-buy">Buy Now</button>
-        <button class="btn-cart">Add to Bag</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ================= SECTION 2 ================= -->
-<section class="new-arrivals-products">
-  <div class="new-arrivals-products-header">
-    <h2 class="new-arrivals-products-title">Function Wear Fragrances</h2>
-    <p class="new-arrivals-products-subtitle">
-      Scents chosen for rituals, receptions, and long celebration hours —
-      subtle, elegant, and unforgettable.
-    </p>
-  </div>
-
-  <div class="new-arrivals-grid function-grid">
-
-    <!-- PRODUCT 1 -->
-    <div class="new-arrivals-card">
-      <span class="new-arrivals-badge">POPULAR</span>
-      <button class="card-wishlist" onclick="toggleHeart(this)">♡</button>
-
-      <div class="arrival-image-wrap">
-        <img src="../assets/images/Wedding-3.webp">
-
-        <button class="arrival-quick-view-btn" onclick="openArrivalQuickView(
-          'J SCENTIQUE – Ritual Bloom',
-          '₹ 2,199',
-          '100 ML',
-          'Soft Floral • Musk',
-          'Perfect for traditional functions and daytime ceremonies.',
-          '../assets/images/Wedding-3.webp'
-        )">Quick View</button>
-      </div>
-
-      <div class="new-arrivals-info">
-        <h4>J SCENTIQUE</h4>
-        <p>100 ML</p>
-        <strong>₹ 2,199</strong>
-
-        <div class="product-actions">
-          <button class="product-buy">Buy Now</button>
-          <button class="product-cart">Add to Bag</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- PRODUCT 2 -->
-    <div class="new-arrivals-card">
-      <span class="new-arrivals-badge">NEW</span>
-      <button class="card-wishlist" onclick="toggleHeart(this)">♡</button>
-
-      <div class="arrival-image-wrap">
-        <img src="../assets/images/wedding-4.webp">
-
-        <button class="arrival-quick-view-btn" onclick="openArrivalQuickView(
-          'J SCENTIQUE – Reception Glow',
-          '₹ 2,299',
-          '75 ML',
-          'Amber • Vanilla',
-          'Designed for evening receptions and elegant gatherings.',
-          '../assets/images/wedding-4.webp'
-        )">Quick View</button>
-      </div>
-
-      <div class="new-arrivals-info">
-        <h4>J SCENTIQUE</h4>
-        <p>75 ML</p>
-        <strong>₹ 2,299</strong>
-
-        <div class="product-actions">
-          <button class="product-buy">Buy Now</button>
-          <button class="product-cart">Add to Bag</button>
-        </div>
+        <a href="#" class="add-cart"
+          data-id="arrival-02"
+          data-name="Celebration Night"
+          data-price="2299"
+          data-size="75 ML"
+          data-image="../assets/images/wedding-grid2.png">
+          Add to Cart
+        </a>
       </div>
     </div>
 
     <!-- PRODUCT 3 -->
-    <div class="new-arrivals-card">
-      <span class="new-arrivals-badge">LIMITED</span>
-      <button class="card-wishlist" onclick="toggleHeart(this)">♡</button>
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">POPULAR</span>
 
-      <div class="arrival-image-wrap">
-        <img src="../assets/images/wedding-5.jpg">
+        <button class="product-wishlist"
+          data-id="arrival-03"
+          data-name="Ritual Bloom"
+          data-price="2199"
+          data-size="100 ML"
+          data-image="../assets/images/wedding-grid3.png"
+          onclick="toggleProductWishlist(this)">
+          <i class="fa-regular fa-heart"></i>
+        </button>
 
-        <button class="arrival-quick-view-btn" onclick="openArrivalQuickView(
-          'J SCENTIQUE – Sacred Aura',
-          '₹ 2,499',
+        <img src="../assets/images/wedding-grid3.png">
+
+        <button class="quick-view-btn" onclick="openQuickView(
+          'Ritual Bloom',
+          '₹ 2,199',
           '100 ML',
-          'Floral • Sandalwood',
-          'A calm, sacred fragrance for rituals and blessings.',
-          '../assets/images/wedding-5.jpg'
+          'Soft Floral • Musk',
+          'Perfect for traditional ceremonies.',
+          '../assets/images/wedding-grid3.png'
         )">Quick View</button>
       </div>
 
-      <div class="new-arrivals-info">
-        <h4>J SCENTIQUE</h4>
-        <p>100 ML</p>
-        <strong>₹ 2,499</strong>
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">100 ML</p>
 
-        <div class="product-actions">
-          <button class="product-buy">Buy Now</button>
-          <button class="product-cart">Add to Bag</button>
+        <div class="price-row">
+          <span class="price">₹2,199</span>
+          <a href="#" class="buy-now"
+            data-id="arrival-03"
+            data-name="Ritual Bloom"
+            data-price="2199"
+            data-size="100 ML"
+            data-image="../assets/images/wedding-grid3.png">
+            Buy Now
+          </a>
         </div>
-      </div>
-    </div>
 
-    <!-- PRODUCT 4 -->
-    <div class="new-arrivals-card">
-      <span class="new-arrivals-badge">POPULAR</span>
-      <button class="card-wishlist" onclick="toggleHeart(this)">♡</button>
-
-      <div class="arrival-image-wrap">
-        <img src="../assets/images/wedding-6.png">
-
-        <button class="arrival-quick-view-btn" onclick="openArrivalQuickView(
-          'J SCENTIQUE – Celebration Pact',
-          '₹ 2,699',
-          '100 ML',
-          'Floral • Amber • Musk',
-          'Crafted for long celebrations and unforgettable memories.',
-          '../assets/images/wedding-6.png'
-        )">Quick View</button>
-      </div>
-
-      <div class="new-arrivals-info">
-        <h4>J SCENTIQUE</h4>
-        <p>100 ML</p>
-        <strong>₹ 2,699</strong>
-
-        <div class="product-actions">
-          <button class="product-buy">Buy Now</button>
-          <button class="product-cart">Add to Bag</button>
-        </div>
+        <a href="#" class="add-cart"
+          data-id="arrival-03"
+          data-name="Ritual Bloom"
+          data-price="2199"
+          data-size="100 ML"
+          data-image="../assets/images/wedding-grid3.png">
+          Add to Cart
+        </a>
       </div>
     </div>
 
   </div>
 </section>
 
-<script src="../assets/javascript/arrival.js"></script>
+
+  <!-- ================= QUICK VIEW MODAL ================= -->
+  <div class="quick-overlay" id="quickOverlay" onclick="closeQuickView()"></div>
+
+  <div class="quick-modal" id="quickModal">
+    <button class="quick-close" onclick="closeQuickView()">×</button>
+
+    <div class="quick-wrapper">
+      <div class="quick-image">
+        <img id="qImage" src="" alt="">
+      </div>
+
+      <div class="quick-content">
+        <span class="quick-tag">NEW</span>
+        <h2 id="qName"></h2>
+        <p class="quick-notes" id="qNotes"></p>
+
+        <div class="quick-meta">
+          <span id="qSize"></span>
+          <strong id="qPrice"></strong>
+        </div>
+
+        <p class="quick-desc" id="qDesc"></p>
+
+        <div class="quick-actions">
+          <button class="btn-buy">Buy Now</button>
+          <button class="btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="../assets/javascript/navbar.js"></script>
+  <script src="../assets/javascript/quick-view.js"></script>
+  <script src="../assets/javascript/wishlist.js"></script>
+  <script src="../assets/javascript/cart.js"></script>
+  <script src="../assets/javascript/buy-now.js"></script>
+
 </body>
 </html>

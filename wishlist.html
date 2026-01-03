@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist – J SCENTIQUE</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    .wishlist-page {
+      padding: 120px 8% 80px;
+      color: #fff;
+    }
+
+    .wishlist-title {
+      font-size: 36px;
+      letter-spacing: 3px;
+      margin-bottom: 40px;
+    }
+
+    .wishlist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .wishlist-card {
+      background: #111;
+      border: 1px solid rgba(255,255,255,.08);
+      overflow: hidden;
+    }
+
+    .wishlist-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .wishlist-info {
+      padding: 18px;
+    }
+
+    .wishlist-info h4 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .wishlist-info p {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .wishlist-price {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .wishlist-remove {
+      background: none;
+      border: none;
+      color: #c8a96a;
+      cursor: pointer;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-top: 12px;
+    }
+
+    .wishlist-remove:hover {
+      text-decoration: underline;
+    }
+
+    .empty-wishlist {
+      text-align: center;
+      color: #aaa;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="wishlist-page">
+    <h1 class="wishlist-title">Your Wishlist</h1>
+
+    <div id="wishlistGrid" class="wishlist-grid"></div>
+
+    <div id="emptyWishlist" class="empty-wishlist" style="display:none;">
+      Your wishlist is empty.
+    </div>
+  </section>
+
+  <!-- GLOBAL WISHLIST SCRIPT (NO CHANGES) -->
+  <script src="assets/javascript/wishlist.js"></script>
+
+  <!-- WISHLIST PAGE LOGIC -->
+  <script>
+    function renderWishlist() {
+      const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      const grid = document.getElementById("wishlistGrid");
+      const empty = document.getElementById("emptyWishlist");
+
+      grid.innerHTML = "";
+
+      if (wishlist.length === 0) {
+        empty.style.display = "block";
+        return;
+      }
+
+      empty.style.display = "none";
+
+      wishlist.forEach(item => {
+        grid.innerHTML += `
+          <div class="wishlist-card">
+            <img src="${item.image}" alt="Product Image">
+
+            <div class="wishlist-info">
+              <h4>J SCENTIQUE</h4>
+              <p>${item.size}</p>
+
+              <div class="wishlist-price">₹${item.price}</div>
+
+              <button class="wishlist-remove"
+                onclick="removeFromWishlist('${item.id}')">
+                Remove
+              </button>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function removeFromWishlist(id) {
+      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      wishlist = wishlist.filter(item => item.id !== id);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      renderWishlist();
+    }
+
+    document.addEventListener("DOMContentLoaded", renderWishlist);
+  </script>
+
+</body>
+</html>

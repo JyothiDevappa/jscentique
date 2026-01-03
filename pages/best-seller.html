@@ -2,280 +2,247 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Sellers – J Scentique</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
 
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/best-seller.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
 
-    
-  <!-- NAVBAR -->
+  <!-- ================= NAVBAR ================= -->
   <nav class="navbar">
     <div class="navbar-container">
       <button class="website-btn">
         <a href="http://www.jscentique.com" target="_blank">www.jscentique.com</a>
       </button>
+
       <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="../index.html" class="nav-link active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-        </li>
-        <li class="nav-item">
-          <a href="../pages/contact.html" class="nav-link">About</a>
-        </li>
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../pages/best-seller.html" class="nav-link active">Best Seller</a></li>
+        <li class="nav-item"><a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a></li>
+        <li class="nav-item"><a href="../pages/contact.html" class="nav-link">About</a></li>
       </ul>
-      <!-- Hamburger Menu -->
+
+      <a href="../wishlist.html" class="nav-wishlist">
+        <i class="fa-regular fa-heart"></i>
+        <span id="wishlistCount">0</span>
+      </a>
+
+      <a href="../pages/cart.html" class="nav-cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="cartCount">0</span>
+      </a>
+
       <button class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
+
     <!-- Mobile Menu -->
     <ul class="nav-menu-mobile" id="navMenuMobile">
-      <li class="nav-item">
-        <a href="../index.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item">
-        <a href="../pages/best-seller.html" class="nav-link">Best Seller</a>
-      </li>
-      <li class="nav-item">
-        <a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a>
-      </li>
-      <li class="nav-item">
-        <a href="../pages/contact.html" class="nav-link">Contact</a>
-      </li>
+      <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="../pages/best-seller.html" class="nav-link active">Best Seller</a></li>
+      <li class="nav-item"><a href="../pages/new-arrivals.html" class="nav-link">New Arrivals</a></li>
+      <li class="nav-item"><a href="../pages/contact.html" class="nav-link">Contact</a></li>
     </ul>
   </nav>
+  <!-- END OF NAVBAR -->
 
+  <!-- ================= PRODUCTS SECTION ================= -->
+<section class="new-collection-section">
+  <div class="section-title">
+    <h2>Best Seller Products</h2>
+    <p>Our most loved fragrances, chosen again and again.</p>
+  </div>
 
-  
+  <div class="new-collection">
 
-  <!-- ================= HERO (OLD STYLE KEPT) ================= -->
-  <section class="best-seller-hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <span>BEST SELLERS</span>
-      <h1>Top Best Seller Collections</h1>
-      <p>The fragrances everyone comes back for.</p>
-      <a href="#products" class="hero-btn">Explore Collection</a>
+    <!-- PRODUCT 1 -->
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">BESTSELLER</span>
+
+        <button class="product-wishlist"
+          data-id="jscentique-best-01"
+          data-name="Royal Amber"
+          data-price="2499"
+          data-size="100 ML"
+          data-image="../assets/images/best-1.png"
+          onclick="toggleProductWishlist(this)">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <img src="../assets/images/best-1.png">
+
+        <button class="quick-view-btn" onclick="openQuickView(
+          'Royal Amber',
+          '₹ 2,499',
+          '100 ML',
+          'Amber • Musk • Woody',
+          'A luxurious fragrance loved by all.',
+          '../assets/images/best-1.png'
+        )">Quick View</button>
+      </div>
+
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">100 ML</p>
+
+        <div class="price-row">
+          <span class="price">₹2,499</span>
+          <a href="#" class="buy-now"
+            data-id="jscentique-best-01"
+            data-name="Royal Amber"
+            data-price="2499"
+            data-size="100 ML"
+            data-image="../assets/images/best-1.png">Buy Now</a>
+        </div>
+
+        <a href="#" class="add-cart" data-id="jscentique-best-01" onclick="addToCart(event,this)">Add to Cart</a>
+      </div>
     </div>
-  </section>
 
-  <!-- ================= PRODUCTS ================= -->
-  <section class="products" id="products">
+    <!-- PRODUCT 2 -->
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">BESTSELLER</span>
 
-    <!-- CENTER TITLE -->
-    <div class="products-header">
-      <h2>Best Seller Products</h2>
-      <p>Our most loved fragrances, chosen again and again.</p>
+        <button class="product-wishlist"
+          data-id="jscentique-best-02"
+          data-name="Velvet Bloom"
+          data-price="1899"
+          data-size="75 ML"
+          data-image="../assets/images/best-2.png"
+          onclick="toggleProductWishlist(this)">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+
+        <img src="../assets/images/best-2.png">
+
+        <button class="quick-view-btn" onclick="openQuickView(
+          'Velvet Bloom',
+          '₹ 1,899',
+          '75 ML',
+          'Floral • Vanilla',
+          'Soft, elegant and feminine fragrance.',
+          '../assets/images/best-2.png'
+        )">Quick View</button>
+      </div>
+
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">75 ML</p>
+
+        <div class="price-row">
+          <span class="price">₹1,899</span>
+          <a href="#" class="buy-now"
+            data-id="jscentique-best-02"
+            data-name="Velvet Bloom"
+            data-price="1899"
+            data-size="75 ML"
+            data-image="../assets/images/best-2.png">Buy Now</a>
+        </div>
+
+        <a href="#" class="add-cart" data-id="jscentique-best-02" onclick="addToCart(event,this)">Add to Cart</a>
+      </div>
     </div>
 
+    <!-- PRODUCT 3 -->
+    <div class="product-card">
+      <div class="product-image">
+        <span class="badge">BESTSELLER</span>
 
+        <button class="product-wishlist"
+          data-id="jscentique-best-03"
+          data-name="Citrus Aura"
+          data-price="1599"
+          data-size="50 ML"
+          data-image="../assets/images/best-3.png"
+          onclick="toggleProductWishlist(this)">
+          <i class="fa-regular fa-heart"></i>
+        </button>
 
+        <img src="../assets/images/best-3.png">
 
-    <div class="grid">
-      <!-- PRODUCT -->
-
-      <article class="product">
-        <div class="image">
-          <img src="../assets/images/grid3.png" alt="J Scentique Signature">
-
-          <!-- QUICK VIEW ICON -->
-          <button class="quick-view" onclick="openQuickView(
-          'J SCENTIQUE – Signature',
-          '₹ 1,200',
+        <button class="quick-view-btn" onclick="openQuickView(
+          'Citrus Aura',
+          '₹ 1,599',
           '50 ML',
-          'Floral · Musk',
-          'A refined everyday fragrance crafted for confident women. Soft florals blend with clean musk to create a scent that feels intimate, elegant, and timeless.',
-          '../assets/images/grid3.png'
-        )">+</button>
+          'Citrus • Fresh',
+          'Fresh and energetic daily wear.',
+          '../assets/images/best-3.png'
+        )">Quick View</button>
+      </div>
 
+      <div class="product-info">
+        <h3>J SCENTIQUE</h3>
+        <p class="ml">50 ML</p>
 
-          <div class="wishlist-btn" onclick="toggleWishlist(this)">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-             2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
-             C13.09 3.81 14.76 3 16.5 3
-             19.58 3 22 5.42 22 8.5
-             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-            </svg>
-          </div>
-
-
-
+        <div class="price-row">
+          <span class="price">₹1,599</span>
+          <a href="#" class="buy-now"
+            data-id="jscentique-best-03"
+            data-name="Citrus Aura"
+            data-price="1599"
+            data-size="50 ML"
+            data-image="../assets/images/best-3.png">Buy Now</a>
         </div>
 
-        <div class="info">
-          <h3>J SCENTIQUE</h3>
-          <span>Signature · 50 ML</span>
-
-          <div class="rating">★★★★☆ <small>(124)</small></div>
-
-          <strong>₹ 1,200</strong>
-
-          <!-- ACTIONS -->
-          <div class="actions">
-            <button class="buy">Buy Now</button>
-            <button class="cart">Add to Bag</button>
-          </div>
-        </div>
-
-      </article>
-
-
-      <article class="product">
-        <div class="image">
-          <img src="../assets/images/grid3.png" alt="J Scentique Signature">
-
-          <!-- QUICK VIEW ICON -->
-          <button class="quick-view" onclick="openQuickView(
-          'J SCENTIQUE – Signature',
-          '₹ 1,200',
-          '50 ML',
-          'Floral · Musk',
-          'A refined everyday fragrance crafted for confident women. Soft florals blend with clean musk to create a scent that feels intimate, elegant, and timeless.',
-          '../assets/images/grid3.png'
-        )">+</button>
-
-
-          <div class="wishlist-btn" onclick="toggleWishlist(this)">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-             2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
-             C13.09 3.81 14.76 3 16.5 3
-             19.58 3 22 5.42 22 8.5
-             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-            </svg>
-          </div>
-
-
-
-        </div>
-
-        <div class="info">
-          <h3>J SCENTIQUE</h3>
-          <span>Signature · 50 ML</span>
-
-          <div class="rating">★★★★☆ <small>(124)</small></div>
-
-          <strong>₹ 1,200</strong>
-
-          <!-- ACTIONS -->
-          <div class="actions">
-            <button class="buy">Buy Now</button>
-            <button class="cart">Add to Bag</button>
-          </div>
-        </div>
-
-      </article>
-
-
-      <!-- DUPLICATE SAME STRUCTURE -->
-      <article class="product">
-        <div class="image">
-          <img src="../assets/images/grid3.png" alt="J Scentique Signature">
-
-          <!-- QUICK VIEW ICON -->
-          <button class="quick-view" onclick="openQuickView(
-          'J SCENTIQUE – Signature',
-          '₹ 1,200',
-          '50 ML',
-          'Floral · Musk',
-          'A refined everyday fragrance crafted for confident women. Soft florals blend with clean musk to create a scent that feels intimate, elegant, and timeless.',
-          '../assets/images/grid3.png'
-        )">+</button>
-
-
-          <div class="wishlist-btn" onclick="toggleWishlist(this)">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
-             2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
-             C13.09 3.81 14.76 3 16.5 3
-             19.58 3 22 5.42 22 8.5
-             c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-            </svg>
-          </div>
-
-
-
-        </div>
-
-        <div class="info">
-          <h3>J SCENTIQUE</h3>
-          <span>Signature · 50 ML</span>
-
-          <div class="rating">★★★★☆ <small>(124)</small></div>
-
-          <strong>₹ 1,200</strong>
-
-          <!-- ACTIONS -->
-          <div class="actions">
-            <button class="buy">Buy Now</button>
-            <button class="cart">Add to Bag</button>
-          </div>
-        </div>
-
-      </article>
-
-
-
-
-
+        <a href="#" class="add-cart" data-id="jscentique-best-03" onclick="addToCart(event,this)">Add to Cart</a>
+      </div>
     </div>
-  </section>
 
-  <!-- ================= QUICK VIEW ================= -->
-  <div class="qv-overlay" id="qvOverlay" onclick="closeQuickView()"></div>
+  </div>
+</section>
 
-  <div class="qv-modal" id="qvModal">
-    <button class="qv-close" onclick="closeQuickView()">×</button>
+  <!-- ================= QUICK VIEW MODAL ================= -->
+  <div class="quick-overlay" id="quickOverlay" onclick="closeQuickView()"></div>
 
-    <div class="qv-wrap">
-      <img id="qvImage" alt="">
+  <div class="quick-modal" id="quickModal">
+    <button class="quick-close" onclick="closeQuickView()">×</button>
 
-      <div class="qv-info">
-        <small id="qvSize"></small>
-        <h2 id="qvName"></h2>
+    <div class="quick-wrapper">
+      <div class="quick-image">
+        <img id="qImage" src="" alt="">
+      </div>
 
-        <p class="qv-notes" id="qvNotes"></p>
-        <p class="qv-desc" id="qvDesc"></p>
+      <div class="quick-content">
+        <span class="quick-tag">BESTSELLER</span>
+        <h2 id="qName"></h2>
+        <p class="quick-notes" id="qNotes"></p>
 
-        <div class="qv-trust">
-          <span>✓ Long lasting</span>
-          <span>✓ 100% authentic</span>
-          <span>✓ Free shipping</span>
+        <div class="quick-meta">
+          <span id="qSize"></span>
+          <strong id="qPrice"></strong>
         </div>
 
-        <strong id="qvPrice"></strong>
+        <p class="quick-desc" id="qDesc"></p>
 
-        <div class="qv-actions">
-          <button class="buy">Buy Now</button>
-          <button class="cart">Add to Bag</button>
+        <div class="quick-actions">
+          <button class="btn-buy">Buy Now</button>
+          <button class="btn-cart">Add to Cart</button>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- ================= SCRIPTS ================= -->
+  <script src="../assets/javascript/navbar.js"></script>
+  <script src="../assets/javascript/quick-view.js"></script>
+  <script src="../assets/javascript/wishlist.js"></script>
+  <script src="../assets/javascript/cart.js"></script>
+  <script src="../assets/javascript/buy-now.js"></script>
 
-
-
-
-
-
-  <script src="../assets/javascript/bestseller.js"></script>
 </body>
 
 </html>
