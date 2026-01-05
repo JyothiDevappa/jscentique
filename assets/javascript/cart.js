@@ -35,7 +35,12 @@ function addToCart(e, btn) {
     name: card.querySelector("h3").innerText,
     size: card.querySelector(".ml").innerText,
     price: getNumericPrice(card.querySelector(".price").innerText),
-    image: card.querySelector("img").src,
+
+
+    // image: card.querySelector("img").src,
+image: new URL(card.querySelector("img").getAttribute("src"), window.location.origin).pathname,
+
+
     qty: 1
   };
 
