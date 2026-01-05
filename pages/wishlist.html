@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,7 +30,7 @@
 
     .wishlist-card {
       background: #111;
-      border: 1px solid rgba(255,255,255,.08);
+      border: 1px solid rgba(255, 255, 255, .08);
       overflow: hidden;
     }
 
@@ -77,6 +78,27 @@
       color: #aaa;
       margin-top: 80px;
     }
+
+    .wishlist-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.wishlist-actions .buy-now {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #111;
+  background: #c8a96a;
+  padding: 6px 14px;
+  text-decoration: none;
+}
+
+.wishlist-actions .buy-now:hover {
+  opacity: 0.85;
+}
+
   </style>
 </head>
 
@@ -122,10 +144,28 @@
 
               <div class="wishlist-price">₹${item.price}</div>
 
-              <button class="wishlist-remove"
-                onclick="removeFromWishlist('${item.id}')">
-                Remove
-              </button>
+
+             
+
+<div class="wishlist-actions">
+  <a href="#"
+     class="buy-now"
+     data-id="${item.id}"
+     data-name="${item.name}"
+     data-price="${item.price}"
+     data-size="${item.size}"
+     data-image="${item.image}">
+     Buy Now
+  </a>
+
+  <button class="wishlist-remove"
+    onclick="removeFromWishlist('${item.id}')">
+    Remove
+  </button>
+</div>
+
+
+
             </div>
           </div>
         `;
@@ -142,5 +182,11 @@
     document.addEventListener("DOMContentLoaded", renderWishlist);
   </script>
 
+
+
+<script src="../assets/javascript/wishlist.js"></script>
+<script src="../assets/javascript/buy-now.js"></script>
+
 </body>
+
 </html>
