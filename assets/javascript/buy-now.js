@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("checkoutItem", JSON.stringify(checkoutItem));
 
       // Redirect to checkout page
-      window.location.href = "/pages/checkout.html";
+      window.location.href = "../pages/checkout.html";
     });
   });
 });
