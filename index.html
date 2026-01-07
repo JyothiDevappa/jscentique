@@ -74,7 +74,7 @@
 
 
   <!-- ================= HERO ================= -->
-  <section class="hero" id="home">
+  <!-- <section class="hero" id="home">
     <div class="hero-content">
       <div class="hero-text">
         <h1>J SCENTIQUE</h1>
@@ -82,37 +82,66 @@
         <a href="pages/new-arrivals.html" class="hero-btn">Check New Arrivals →</a>
       </div>
     </div>
+  </section> -->
+
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+
+    <div class="hero-left">
+      <span class="hero-line"></span>
+
+      <div class="hero-socials">
+        <a href="#">IG</a>
+        <a href="#">FB</a>
+        <a href="#">TW</a>
+      </div>
+
+      <span class="hero-line"></span>
+    </div>
+
+    <div class="hero-center">
+      <span class="hero-eyebrow">Crafted in Bangalore · South India</span>
+
+      <h1>J SCENTIQUE</h1>
+
+      <p>Where elegance meets timeless fragrance</p>
+
+      <a href="pages/new-arrivals.html" class="hero-btn">
+        Explore Fragrances
+      </a>
+    </div>
+
+    <div class="hero-right">
+      <span class="hero-scroll">SCROLL</span>
+    </div>
+
   </section>
 
 
 
-<!-- ================= NEW COLLECTION ================= -->
-<section class="new-collection-section">
-  <div class="section-title">
-    <h2>New Collections</h2>
-    <p>Discover our latest fragrances</p>
-  </div>
+  <!-- ================= NEW COLLECTION ================= -->
+  <section class="new-collection-section">
+    <div class="section-title">
+      <h2>New Collections</h2>
+      <p>Discover our latest fragrances</p>
+    </div>
 
-  <div class="new-collection">
+    <div class="new-collection">
 
-    <!-- PRODUCT 1 -->
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">NEW</span>
+      <!-- PRODUCT 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <span class="badge">NEW</span>
 
-        <button class="product-wishlist" 
-          data-id="jscentique-new-01" 
-          data-name="Noir Essence" 
-          data-price="2199"
-          data-size="100 ML" 
-          data-image="../assets/images/new-1.png" 
-          onclick="toggleProductWishlist(this)">
-          <i class="fa-regular fa-heart"></i>
-        </button>
+          <button class="product-wishlist" data-id="jscentique-new-01" data-name="Noir Essence" data-price="2199"
+            data-size="100 ML" data-image="../assets/images/new-1.png" onclick="toggleProductWishlist(this)">
+            <i class="fa-regular fa-heart"></i>
+          </button>
 
-        <img src="assets/images/new-1.png">
+          <img src="assets/images/new-1.png">
 
-        <button class="quick-view-btn" onclick="openQuickView(
+          <button class="quick-view-btn" onclick="openQuickView(
           'Noir Essence',
           '₹ 2,199',
           '100 ML',
@@ -120,44 +149,35 @@
           'A deep and mysterious everyday fragrance.',
           'assets/images/new-1.png'
         )">Quick View</button>
-      </div>
-
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">100 ML</p>
-
-        <div class="price-row">
-          <span class="price">₹2,199</span>
-          <a href="#" class="buy-now"
-            data-id="jscentique-new-01"
-            data-name="Noir Essence"
-            data-price="2199"
-            data-size="100 ML"
-            data-image="assets/images/new-1.png">Buy Now</a>
         </div>
 
-        <a href="#" class="add-cart" data-id="jscentique-new-01" onclick="addToCart(event,this)">Add to Cart</a>
+        <div class="product-info">
+          <h3>J SCENTIQUE</h3>
+          <p class="ml">100 ML</p>
+
+          <div class="price-row">
+            <span class="price">₹2,199</span>
+            <a href="#" class="buy-now" data-id="jscentique-new-01" data-name="Noir Essence" data-price="2199"
+              data-size="100 ML" data-image="assets/images/new-1.png">Buy Now</a>
+          </div>
+
+          <a href="#" class="add-cart" data-id="jscentique-new-01" onclick="addToCart(event,this)">Add to Cart</a>
+        </div>
       </div>
-    </div>
 
-    <!-- PRODUCT 2 -->
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">NEW</span>
+      <!-- PRODUCT 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <span class="badge">NEW</span>
 
-        <button class="product-wishlist" 
-          data-id="jscentique-new-02" 
-          data-name="Velvet Bloom" 
-          data-price="1899"
-          data-size="75 ML" 
-          data-image="../assets/images/new-2.png" 
-          onclick="toggleProductWishlist(this)">
-          <i class="fa-regular fa-heart"></i>
-        </button>
+          <button class="product-wishlist" data-id="jscentique-new-02" data-name="Velvet Bloom" data-price="1899"
+            data-size="75 ML" data-image="../assets/images/new-2.png" onclick="toggleProductWishlist(this)">
+            <i class="fa-regular fa-heart"></i>
+          </button>
 
-        <img src="assets/images/new-2.png">
+          <img src="assets/images/new-2.png">
 
-        <button class="quick-view-btn" onclick="openQuickView(
+          <button class="quick-view-btn" onclick="openQuickView(
           'Velvet Bloom',
           '₹ 1,899',
           '75 ML',
@@ -165,44 +185,35 @@
           'Soft, elegant and feminine fragrance.',
           'assets/images/new-2.png'
         )">Quick View</button>
-      </div>
-
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">75 ML</p>
-
-        <div class="price-row">
-          <span class="price">₹1,899</span>
-          <a href="#" class="buy-now"
-            data-id="jscentique-new-02"
-            data-name="Velvet Bloom"
-            data-price="1899"
-            data-size="75 ML"
-            data-image="assets/images/new-2.png">Buy Now</a>
         </div>
 
-        <a href="#" class="add-cart" data-id="jscentique-new-02" onclick="addToCart(event,this)">Add to Cart</a>
+        <div class="product-info">
+          <h3>J SCENTIQUE</h3>
+          <p class="ml">75 ML</p>
+
+          <div class="price-row">
+            <span class="price">₹1,899</span>
+            <a href="#" class="buy-now" data-id="jscentique-new-02" data-name="Velvet Bloom" data-price="1899"
+              data-size="75 ML" data-image="assets/images/new-2.png">Buy Now</a>
+          </div>
+
+          <a href="#" class="add-cart" data-id="jscentique-new-02" onclick="addToCart(event,this)">Add to Cart</a>
+        </div>
       </div>
-    </div>
 
-    <!-- PRODUCT 3 -->
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">NEW</span>
+      <!-- PRODUCT 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <span class="badge">NEW</span>
 
-        <button class="product-wishlist" 
-          data-id="jscentique-new-03" 
-          data-name="Citrus Aura" 
-          data-price="1599"
-          data-size="50 ML" 
-          data-image="../assets/images/new-3.png" 
-          onclick="toggleProductWishlist(this)">
-          <i class="fa-regular fa-heart"></i>
-        </button>
+          <button class="product-wishlist" data-id="jscentique-new-03" data-name="Citrus Aura" data-price="1599"
+            data-size="50 ML" data-image="../assets/images/new-3.png" onclick="toggleProductWishlist(this)">
+            <i class="fa-regular fa-heart"></i>
+          </button>
 
-        <img src="assets/images/new-3.png">
+          <img src="assets/images/new-3.png">
 
-        <button class="quick-view-btn" onclick="openQuickView(
+          <button class="quick-view-btn" onclick="openQuickView(
           'Citrus Aura',
           '₹ 1,599',
           '50 ML',
@@ -210,28 +221,24 @@
           'Fresh and energetic daily wear.',
           'assets/images/new-3.png'
         )">Quick View</button>
-      </div>
-
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">50 ML</p>
-
-        <div class="price-row">
-          <span class="price">₹1,599</span>
-          <a href="#" class="buy-now"
-            data-id="jscentique-new-03"
-            data-name="Citrus Aura"
-            data-price="1599"
-            data-size="50 ML"
-            data-image="assets/images/new-3.png">Buy Now</a>
         </div>
 
-        <a href="" class="add-cart" data-id="jscentique-new-03" onclick="addToCart(event,this)">Add to Cart</a>
-      </div>
-    </div>
+        <div class="product-info">
+          <h3>J SCENTIQUE</h3>
+          <p class="ml">50 ML</p>
 
-  </div>
-</section>
+          <div class="price-row">
+            <span class="price">₹1,599</span>
+            <a href="#" class="buy-now" data-id="jscentique-new-03" data-name="Citrus Aura" data-price="1599"
+              data-size="50 ML" data-image="assets/images/new-3.png">Buy Now</a>
+          </div>
+
+          <a href="" class="add-cart" data-id="jscentique-new-03" onclick="addToCart(event,this)">Add to Cart</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 
   <!-- CART POPUP -->
@@ -338,7 +345,7 @@
 
 
 
-  
+
 
 
   <button id="scrollArrow" class="scroll-arrow">
