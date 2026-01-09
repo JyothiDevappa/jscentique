@@ -219,6 +219,74 @@
 
 <body>
 
+
+    <!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="navbar-container">
+
+    <!-- LEFT -->
+    <div class="nav-left">
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="../index.html" class="nav-home" aria-label="Home">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </div>
+
+    <!-- CENTER BRAND -->
+    <div class="nav-brand">
+      J SCENTIQUE
+    </div>
+
+    
+    <!-- RIGHT -->
+    <div class="nav-right">
+      <div class="nav-wishlist" onclick="window.location.href='pages/wishlist.html'">
+        <i class="fa-regular fa-heart"></i>
+        <span id="wishlistCount">0</span>
+      </div>
+
+      <div class="nav-cart" onclick="redirectCart()">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span id="cartCount">0</span>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- OVERLAY -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- ========== SLIDE MENU (DESKTOP + MOBILE) ========== -->
+<div class="side-menu" id="sideMenu">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../pages/best-seller.html">Best Seller</a></li>
+    <li><a href="../pages/new-arrivals.html">New Arrivals</a></li>
+    <li><a href="../pages/about.html">About Us</a></li>
+    <li><a href="../pages/contact.html">Contact Us</a></li>
+  </ul>
+
+   <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+
+ 
+
+  <div class="side-menu-footer">
+    jscentique.com
+  </div>
+</div>
+  <!-- END OF NAVBAR -->
+
+
   <!-- ================= HERO ================= -->
   <section class="about-hero">
     <div>
