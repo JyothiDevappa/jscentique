@@ -9,47 +9,71 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
 
-
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-
   <style>
+    body {
+      background: #000;
+      color: #fff;
+    }
+
     .checkout-page {
-      padding: 120px 8% 80px;
+      padding: 130px 8% 90px;
       max-width: 1100px;
       margin: auto;
+    }
+
+    /* BREADCRUMB (DIOR STYLE) */
+    .breadcrumb {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #777;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .breadcrumb span {
       color: #fff;
     }
 
     .checkout-title {
       font-size: 36px;
       letter-spacing: 3px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     .checkout-grid {
       display: grid;
       grid-template-columns: 1.2fr .8fr;
-      gap: 50px;
+      gap: 70px;
     }
 
     .checkout-box {
-      background: #111;
-      border: 1px solid var(--border);
-      padding: 30px;
+      background: #0c0c0c;
+      border: 1px solid #222;
+      padding: 34px;
     }
 
-    /* INPUTS & SELECTS */
+    /* SECTION DIVIDER */
+    .divider {
+      height: 1px;
+      background: #1e1e1e;
+      margin: 35px 0;
+    }
+
+    /* INPUTS */
     input,
     select,
     textarea {
       width: 100%;
-      padding: 14px;
+      padding: 15px;
       margin-bottom: 16px;
-      background: #0b0b0b;
+      background: #050505;
       border: 1px solid #333;
       color: #fff;
+      font-size: 13px;
+      letter-spacing: 1px;
     }
 
     select option {
@@ -66,28 +90,27 @@
       color: #777;
     }
 
-    /* SECTION TITLES */
+    /* TITLES */
     .section-title {
-      font-size: 14px;
-      letter-spacing: 2px;
-      color: #ddd;
-      margin: 35px 0 15px;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      color: #ccc;
+      margin-bottom: 18px;
     }
 
-    /* CUSTOM RADIO */
+    /* RADIO OPTIONS */
     .option {
       display: flex;
-      align-items: flex-start;
       gap: 14px;
-      padding: 14px;
+      padding: 16px;
       border: 1px solid #333;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       cursor: pointer;
-      transition: .3s;
+      transition: border .3s;
     }
 
     .option:hover {
-      border-color: var(--primary);
+      border-color: #fff;
     }
 
     .option input {
@@ -97,21 +120,21 @@
     .custom-radio {
       width: 16px;
       height: 16px;
-      border: 2px solid #888;
+      border: 2px solid #777;
       border-radius: 50%;
       position: relative;
-      margin-top: 2px;
+      margin-top: 3px;
     }
 
-    .option input:checked+.custom-radio {
-      border-color: var(--primary);
+    .option input:checked + .custom-radio {
+      border-color: #fff;
     }
 
-    .option input:checked+.custom-radio::after {
+    .option input:checked + .custom-radio::after {
       content: '';
       width: 8px;
       height: 8px;
-      background: var(--primary);
+      background: #fff;
       border-radius: 50%;
       position: absolute;
       top: 50%;
@@ -121,21 +144,21 @@
 
     .option-text {
       font-size: 13px;
-      color: #fff;
     }
 
     .option-sub {
       font-size: 11px;
       color: #aaa;
       margin-top: 4px;
+      line-height: 1.4;
     }
 
     /* ORDER SUMMARY */
     .order-item {
       display: flex;
-      gap: 15px;
-      padding-bottom: 15px;
-      margin-bottom: 15px;
+      gap: 16px;
+      padding-bottom: 18px;
+      margin-bottom: 18px;
       border-bottom: 1px solid #222;
     }
 
@@ -146,181 +169,183 @@
     }
 
     .order-item h4 {
-      font-size: 15px;
+      font-size: 14px;
+      margin-bottom: 4px;
     }
 
     .order-item p {
-      font-size: 12px;
+      font-size: 11px;
       color: #aaa;
+
+        margin-bottom: 6px;   /* gap between lines */
+
     }
 
     .total {
       font-size: 18px;
-      margin-top: 20px;
       text-align: right;
+      margin-top: 25px;
+      letter-spacing: 1px;
+    }
+
+    /* TRUST STRIP */
+    .trust {
+      margin-top: 30px;
+      font-size: 11px;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #222;
+      padding-top: 18px;
     }
 
     /* BUTTON */
     .place-order {
       width: 100%;
       margin-top: 30px;
-      padding: 16px;
-      background: var(--primary);
+      padding: 18px;
+      background: #fff;
       color: #000;
       border: none;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      font-size: 12px;
       cursor: pointer;
+      transition: opacity .3s;
     }
 
+    .place-order:hover {
+      opacity: .85;
+    }
 
-
-    /* ======================================
-   MOBILE – REAL CHECKOUT FLOW
-====================================== */
+    /* MOBILE */
     @media (max-width: 768px) {
-
-      /* SINGLE COLUMN */
-      .checkout-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      /* PRODUCT SUMMARY FIRST */
-      .checkout-grid>.checkout-box:nth-child(2) {
-        order: -1;
-      }
-
-      /* SHIPPING SECOND */
-      .checkout-grid>.checkout-box:nth-child(1) {
-        order: 1;
-      }
-
       .checkout-page {
-        padding: 90px 5% 50px;
+        padding: 100px 5% 60px;
       }
 
       .checkout-title {
         font-size: 24px;
         text-align: center;
-        margin-bottom: 25px;
       }
 
-      /* ORDER SUMMARY MOBILE */
-      .order-item {
-        gap: 12px;
+      .checkout-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
 
-      .order-item img {
-        width: 70px;
-        height: 95px;
+      .checkout-grid > .checkout-box:nth-child(2) {
+        order: -1;
       }
 
-      .order-item h4 {
-        font-size: 14px;
-      }
-
-      .order-item p {
-        font-size: 11px;
-      }
-
-      .total {
-        font-size: 16px;
-      }
-
-      /* INPUTS TOUCH FRIENDLY */
-      input,
-      select,
-      textarea {
-        padding: 13px;
-        font-size: 14px;
-      }
-
-      /* BUTTON */
-      .place-order {
-        padding: 15px;
-        font-size: 14px;
+      .trust {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
       }
     }
+
+
+    .remove-item {
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #f3cc62;            /* subtle dark bg */
+  border: 1px solid #222;
+  color: #000000;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.remove-item:hover {
+  background: #fff;            /* clear on hover */
+  color: #000;
+  border-color: #fff;
+}
+
+
   </style>
 </head>
 
 <body>
 
 
-
-  
-  <!-- ================= NAVBAR ================= -->
-  
     <!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-  <div class="navbar-container">
+  <nav class="navbar">
+    <div class="navbar-container">
 
-    <!-- LEFT -->
-    <div class="nav-left">
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <!-- LEFT -->
+      <div class="nav-left">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-      <a href="../index.html" class="nav-home" aria-label="Home">
-        <i class="fa-solid fa-house"></i>
-      </a>
-    </div>
-
-    <!-- CENTER BRAND -->
-    <div class="nav-brand">
-      J SCENTIQUE
-    </div>
-
-    
-    <!-- RIGHT -->
-    <div class="nav-right">
-      <div class="nav-wishlist" onclick="window.location.href='pages/wishlist.html'">
-        <i class="fa-regular fa-heart"></i>
-        <span id="wishlistCount">0</span>
+        <a href="../index.html" class="nav-home" aria-label="Home">
+          <i class="fa-solid fa-house"></i>
+        </a>
       </div>
 
-      <div class="nav-cart" onclick="redirectCart()">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span id="cartCount">0</span>
+      <!-- CENTER BRAND -->
+      <div class="nav-brand">
+        <a href="../index.html">J SCENTIQUE</a>
       </div>
-    </div>
 
-  </div>
-</nav>
 
-<!-- OVERLAY -->
-<div class="menu-overlay" id="menuOverlay"></div>
-
-<!-- ========== SLIDE MENU (DESKTOP + MOBILE) ========== -->
-<div class="side-menu" id="sideMenu">
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../pages/best-seller.html">Best Seller</a></li>
-    <li><a href="../pages/new-arrivals.html">New Arrivals</a></li>
-    <li><a href="../pages/about.html">About Us</a></li>
-    <li><a href="../pages/contact.html">Contact Us</a></li>
-  </ul>
-
-   <div class="footer-socials">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      <!-- RIGHT -->
+      <div class="nav-right">
+        <div class="nav-wishlist" onclick="window.location.href='../pages/wishlist.html'">
+          <i class="fa-regular fa-heart"></i>
+          <span id="wishlistCount">0</span>
         </div>
 
- 
+      
+        <a href="cart.html" class="nav-cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cartCount">0</span>
+        </a>
 
-  <div class="side-menu-footer">
-    jscentique.com
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- OVERLAY -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- ========== SLIDE MENU (DESKTOP + MOBILE) ========== -->
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/best-seller.html">Best Seller</a></li>
+      <li><a href="../pages/new-arrivals.html">New Arrivals</a></li>
+      <li><a href="../pages/about.html">About Us</a></li>
+      <li><a href="../pages/contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="footer-socials">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
+
+
+    <div class="side-menu-footer">
+      jscentique.com
+    </div>
   </div>
-</div>
-  <!-- END OF NAVBAR -->
-
   <!-- END OF NAVBAR -->
 
 
   <section class="checkout-page">
+
+    <div class="breadcrumb">Home / Cart / <span>Checkout</span></div>
+
     <h1 class="checkout-title">Secure Checkout</h1>
 
     <div class="checkout-grid">
@@ -330,17 +355,17 @@
 
         <div class="section-title">SHIPPING DETAILS</div>
 
-        <input id="name" type="text" placeholder="Full Name">
-        <input id="email" type="email" placeholder="Email Address">
-        <input id="phone" type="text" placeholder="Phone Number">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number">
 
-        <select id="country">
-          <option value="">Select Country</option>
-          <option value="India">India</option>
+        <select>
+          <option>Select Country</option>
+          <option>India</option>
         </select>
 
-        <select id="state">
-          <option value="">Select State</option>
+        <select>
+          <option>Select State</option>
           <option>Karnataka</option>
           <option>Tamil Nadu</option>
           <option>Kerala</option>
@@ -349,37 +374,39 @@
           <option>Delhi</option>
         </select>
 
-        <input id="city" type="text" placeholder="City">
-        <input id="pincode" type="text" placeholder="Pincode">
-        <input id="building" type="text" placeholder="Building / Apartment / House No">
-        <textarea id="address" placeholder="Street, Area, Landmark (optional)"></textarea>
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="Pincode">
+        <input type="text" placeholder="Building / Apartment / House No">
+        <textarea placeholder="Street, Area, Landmark (optional)"></textarea>
+
+        <div class="divider"></div>
 
         <div class="section-title">DELIVERY METHOD</div>
 
         <label class="option">
-          <input type="radio" name="delivery" checked>
+          <input type="radio" checked>
           <span class="custom-radio"></span>
           <div>
             <div class="option-text">Standard Delivery</div>
-            <div class="option-sub">
-              Delivered safely to your doorstep within 3–5 business days • Free
-            </div>
+            <div class="option-sub">3–5 business days • Free</div>
           </div>
         </label>
+
+        <div class="divider"></div>
 
         <div class="section-title">PAYMENT METHOD</div>
 
         <label class="option">
-          <input type="radio" name="payment" value="COD" checked>
+          <input type="radio" checked>
           <span class="custom-radio"></span>
           <div>
             <div class="option-text">Cash on Delivery</div>
-            <div class="option-sub">Pay when your order is delivered</div>
+            <div class="option-sub">Pay when delivered</div>
           </div>
         </label>
 
         <label class="option">
-          <input type="radio" name="payment" value="ONLINE">
+          <input type="radio">
           <span class="custom-radio"></span>
           <div>
             <div class="option-text">Online Payment</div>
@@ -393,132 +420,23 @@
       <div class="checkout-box">
         <div id="checkoutItems"></div>
         <div class="total" id="checkoutTotal"></div>
+
         <button class="place-order" onclick="placeOrder()">Place Order</button>
+
+        <div class="trust">
+          <span>Secure Payments</span>
+          <span>Easy Returns</span>
+          <span>24×7 Support</span>
+        </div>
       </div>
 
     </div>
   </section>
 
-
-
-
-
-  <script>
-    const checkoutItems = document.getElementById("checkoutItems");
-    const checkoutTotal = document.getElementById("checkoutTotal");
-
-    let items = [];
-    let total = 0;
-
-    /* ------------------------------
-       LOAD ITEMS (BUY NOW or CART)
-    --------------------------------*/
-    const singleItem = JSON.parse(localStorage.getItem("checkoutItem"));
-
-    if (singleItem) {
-      items = [singleItem];
-      localStorage.removeItem("checkoutItem");
-    } else {
-      items = JSON.parse(localStorage.getItem("cart")) || [];
-    }
-
-    if (items.length === 0) {
-      checkoutItems.innerHTML = "<p style='color:#aaa'>Your cart is empty.</p>";
-    }
-
-    /* ------------------------------
-       RENDER ORDER SUMMARY
-    --------------------------------*/
-    items.forEach(item => {
-      total += item.price * item.qty;
-
-      checkoutItems.innerHTML += `
-    <div class="order-item">
-
-      <img src="../${item.image}" alt="${item.name}">
-
-      <div>
-        <h4>${item.name}</h4>
-        <p>${item.size || ""}</p>
-        <p>Qty: ${item.qty}</p>
-        <p>₹${item.price}</p>
-      </div>
-    </div>
-  `;
-    });
-
-    checkoutTotal.innerText = `Total: ₹${total}`;
-
-    /* ------------------------------
-       PLACE ORDER
-    --------------------------------*/
-    function placeOrder() {
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const country = document.getElementById("country").value;
-      const state = document.getElementById("state").value;
-      const city = document.getElementById("city").value.trim();
-      const pincode = document.getElementById("pincode").value.trim();
-      const building = document.getElementById("building").value.trim();
-      const address = document.getElementById("address").value.trim();
-
-      const payment = document.querySelector(
-        'input[name="payment"]:checked'
-      ).value;
-
-      /* ---- BASIC VALIDATION ---- */
-      if (
-        !name || !phone || !country || !state ||
-        !city || !pincode || !building
-      ) {
-        alert("Please complete all required shipping details.");
-        return;
-      }
-
-      /* ---- ONLINE PAYMENT PLACEHOLDER ---- */
-      if (payment === "ONLINE") {
-        alert("Online payment (Razorpay / Stripe) will be added next.");
-        return;
-      }
-
-      /* ---- SAVE ORDER (FRONTEND ONLY) ---- */
-      const orderData = {
-        id: "JSC-" + Math.floor(10000 + Math.random() * 90000),
-        customer: {
-          name,
-          email,
-          phone,
-          country,
-          state,
-          city,
-          pincode,
-          building,
-          address
-        },
-        items,
-        total,
-        payment,
-        date: new Date().toISOString()
-      };
-
-      localStorage.setItem("lastOrder", JSON.stringify(orderData));
-      localStorage.removeItem("cart");
-
-      /* ---- SUCCESS PAGE ---- */
-      window.location.href = "../pages/order-success.html";
-    }
-  </script>
-
   <script src="../assets/javascript/navbar.js"></script>
-
-
   <script src="../assets/javascript/cart.js"></script>
   <script src="../assets/javascript/buy-now.js"></script>
-
-
+  <script src="../assets/javascript/checkout.js"></script>
 
 </body>
-
 </html>

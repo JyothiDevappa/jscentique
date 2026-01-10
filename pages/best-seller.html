@@ -10,112 +10,107 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
 </head>
 
 <body>
 
   <!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-  <div class="navbar-container">
+  <nav class="navbar">
+    <div class="navbar-container">
 
-    <!-- LEFT -->
-    <div class="nav-left">
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <!-- LEFT -->
+      <div class="nav-left">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-      <a href="../index.html" class="nav-home" aria-label="Home">
-        <i class="fa-solid fa-house"></i>
-      </a>
-    </div>
-
-    <!-- CENTER BRAND -->
-    <div class="nav-brand">
-      J SCENTIQUE
-    </div>
-
-    
-    <!-- RIGHT -->
-    <div class="nav-right">
-      <div class="nav-wishlist" onclick="window.location.href='pages/wishlist.html'">
-        <i class="fa-regular fa-heart"></i>
-        <span id="wishlistCount">0</span>
+        <a href="../index.html" class="nav-home" aria-label="Home">
+          <i class="fa-solid fa-house"></i>
+        </a>
       </div>
 
-      <div class="nav-cart" onclick="redirectCart()">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span id="cartCount">0</span>
+      <!-- CENTER BRAND -->
+      <div class="nav-brand">
+        <a href="../index.html">J SCENTIQUE</a>
       </div>
-    </div>
 
-  </div>
-</nav>
 
-<!-- OVERLAY -->
-<div class="menu-overlay" id="menuOverlay"></div>
-
-<!-- ========== SLIDE MENU (DESKTOP + MOBILE) ========== -->
-<div class="side-menu" id="sideMenu">
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../pages/best-seller.html">Best Seller</a></li>
-    <li><a href="../pages/new-arrivals.html">New Arrivals</a></li>
-    <li><a href="../pages/about.html">About Us</a></li>
-    <li><a href="../pages/contact.html">Contact Us</a></li>
-  </ul>
-
-   <div class="footer-socials">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      <!-- RIGHT -->
+      <div class="nav-right">
+        <div class="nav-wishlist" onclick="window.location.href='../pages/wishlist.html'">
+          <i class="fa-regular fa-heart"></i>
+          <span id="wishlistCount">0</span>
         </div>
 
- 
+      
+        <a href="cart.html" class="nav-cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cartCount">0</span>
+        </a>
 
-  <div class="side-menu-footer">
-    jscentique.com
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- OVERLAY -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- ========== SLIDE MENU (DESKTOP + MOBILE) ========== -->
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/best-seller.html">Best Seller</a></li>
+      <li><a href="../pages/new-arrivals.html">New Arrivals</a></li>
+      <li><a href="../pages/about.html">About Us</a></li>
+      <li><a href="../pages/contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="footer-socials">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
+
+
+    <div class="side-menu-footer">
+      jscentique.com
+    </div>
   </div>
-</div>
   <!-- END OF NAVBAR -->
 
 
 
-  
+
   <!-- ================= PRODUCTS SECTION ================= -->
-<section class="new-collection-section">
-  <div class="section-title">
-    <h2>Best Seller Products</h2>
-    <p>Our most loved fragrances, chosen again and again.</p>
-  </div>
+  <section class="new-collection-section">
+    <div class="section-title">
+      <h2>Best Seller Products</h2>
+      <p>Our most loved fragrances, chosen again and again.</p>
+    </div>
 
-  <div class="new-collection">
+    <div class="new-collection">
 
-    <!-- PRODUCT 1 -->
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">BESTSELLER</span>
+      <!-- PRODUCT 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <span class="badge">BESTSELLER</span>
 
-        <button class="product-wishlist"
-          data-id="jscentique-best-01"
-          data-name="Royal Amber"
-          data-price="2499"
-          data-size="100 ML"
-          data-image="../assets/images/best-1.png"
-          onclick="toggleProductWishlist(this)">
-          <i class="fa-regular fa-heart"></i>
-        </button>
+          <button class="product-wishlist" data-id="jscentique-best-01" data-name="Royal Amber" data-price="2499"
+            data-size="100 ML" data-image="../assets/images/best-1.png" onclick="toggleProductWishlist(this)">
+            <i class="fa-regular fa-heart"></i>
+          </button>
 
-        <img src="../assets/images/best-1.png">
+          <img src="../assets/images/best-1.png">
 
-        <button class="quick-view-btn" onclick="openQuickView(
+          <button class="quick-view-btn" onclick="openQuickView(
           'Royal Amber',
           '₹ 2,499',
           '100 ML',
@@ -123,44 +118,35 @@
           'A luxurious fragrance loved by all.',
           '../assets/images/best-1.png'
         )">Quick View</button>
-      </div>
-
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">100 ML</p>
-
-        <div class="price-row">
-          <span class="price">₹2,499</span>
-          <a href="#" class="buy-now"
-            data-id="jscentique-best-01"
-            data-name="Royal Amber"
-            data-price="2499"
-            data-size="100 ML"
-            data-image="../assets/images/best-1.png">Buy Now</a>
         </div>
 
-        <a href="#" class="add-cart" data-id="jscentique-best-01" onclick="addToCart(event,this)">Add to Cart</a>
+        <div class="product-info">
+          <h3>J SCENTIQUE</h3>
+          <p class="ml">100 ML</p>
+
+          <div class="price-row">
+            <span class="price">₹2,499</span>
+            <a href="#" class="buy-now" data-id="jscentique-best-01" data-name="Royal Amber" data-price="2499"
+              data-size="100 ML" data-image="../assets/images/best-1.png">Buy Now</a>
+          </div>
+
+          <a href="#" class="add-cart" data-id="jscentique-best-01" onclick="addToCart(event,this)">Add to Cart</a>
+        </div>
       </div>
-    </div>
 
-    <!-- PRODUCT 2 -->
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">BESTSELLER</span>
+      <!-- PRODUCT 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <span class="badge">BESTSELLER</span>
 
-        <button class="product-wishlist"
-          data-id="jscentique-best-02"
-          data-name="Velvet Bloom"
-          data-price="1899"
-          data-size="75 ML"
-          data-image="../assets/images/best-2.png"
-          onclick="toggleProductWishlist(this)">
-          <i class="fa-regular fa-heart"></i>
-        </button>
+          <button class="product-wishlist" data-id="jscentique-best-02" data-name="Velvet Bloom" data-price="1899"
+            data-size="75 ML" data-image="../assets/images/best-2.png" onclick="toggleProductWishlist(this)">
+            <i class="fa-regular fa-heart"></i>
+          </button>
 
-        <img src="../assets/images/best-2.png">
+          <img src="../assets/images/best-2.png">
 
-        <button class="quick-view-btn" onclick="openQuickView(
+          <button class="quick-view-btn" onclick="openQuickView(
           'Velvet Bloom',
           '₹ 1,899',
           '75 ML',
@@ -168,44 +154,35 @@
           'Soft, elegant and feminine fragrance.',
           '../assets/images/best-2.png'
         )">Quick View</button>
-      </div>
-
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">75 ML</p>
-
-        <div class="price-row">
-          <span class="price">₹1,899</span>
-          <a href="#" class="buy-now"
-            data-id="jscentique-best-02"
-            data-name="Velvet Bloom"
-            data-price="1899"
-            data-size="75 ML"
-            data-image="../assets/images/best-2.png">Buy Now</a>
         </div>
 
-        <a href="#" class="add-cart" data-id="jscentique-best-02" onclick="addToCart(event,this)">Add to Cart</a>
+        <div class="product-info">
+          <h3>J SCENTIQUE</h3>
+          <p class="ml">75 ML</p>
+
+          <div class="price-row">
+            <span class="price">₹1,899</span>
+            <a href="#" class="buy-now" data-id="jscentique-best-02" data-name="Velvet Bloom" data-price="1899"
+              data-size="75 ML" data-image="../assets/images/best-2.png">Buy Now</a>
+          </div>
+
+          <a href="#" class="add-cart" data-id="jscentique-best-02" onclick="addToCart(event,this)">Add to Cart</a>
+        </div>
       </div>
-    </div>
 
-    <!-- PRODUCT 3 -->
-    <div class="product-card">
-      <div class="product-image">
-        <span class="badge">BESTSELLER</span>
+      <!-- PRODUCT 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <span class="badge">BESTSELLER</span>
 
-        <button class="product-wishlist"
-          data-id="jscentique-best-03"
-          data-name="Citrus Aura"
-          data-price="1599"
-          data-size="50 ML"
-          data-image="../assets/images/best-3.png"
-          onclick="toggleProductWishlist(this)">
-          <i class="fa-regular fa-heart"></i>
-        </button>
+          <button class="product-wishlist" data-id="jscentique-best-03" data-name="Citrus Aura" data-price="1599"
+            data-size="50 ML" data-image="../assets/images/best-3.png" onclick="toggleProductWishlist(this)">
+            <i class="fa-regular fa-heart"></i>
+          </button>
 
-        <img src="../assets/images/best-3.png">
+          <img src="../assets/images/best-3.png">
 
-        <button class="quick-view-btn" onclick="openQuickView(
+          <button class="quick-view-btn" onclick="openQuickView(
           'Citrus Aura',
           '₹ 1,599',
           '50 ML',
@@ -213,28 +190,24 @@
           'Fresh and energetic daily wear.',
           '../assets/images/best-3.png'
         )">Quick View</button>
-      </div>
-
-      <div class="product-info">
-        <h3>J SCENTIQUE</h3>
-        <p class="ml">50 ML</p>
-
-        <div class="price-row">
-          <span class="price">₹1,599</span>
-          <a href="#" class="buy-now"
-            data-id="jscentique-best-03"
-            data-name="Citrus Aura"
-            data-price="1599"
-            data-size="50 ML"
-            data-image="../assets/images/best-3.png">Buy Now</a>
         </div>
 
-        <a href="#" class="add-cart" data-id="jscentique-best-03" onclick="addToCart(event,this)">Add to Cart</a>
-      </div>
-    </div>
+        <div class="product-info">
+          <h3>J SCENTIQUE</h3>
+          <p class="ml">50 ML</p>
 
-  </div>
-</section>
+          <div class="price-row">
+            <span class="price">₹1,599</span>
+            <a href="#" class="buy-now" data-id="jscentique-best-03" data-name="Citrus Aura" data-price="1599"
+              data-size="50 ML" data-image="../assets/images/best-3.png">Buy Now</a>
+          </div>
+
+          <a href="#" class="add-cart" data-id="jscentique-best-03" onclick="addToCart(event,this)">Add to Cart</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ================= QUICK VIEW MODAL ================= -->
   <div class="quick-overlay" id="quickOverlay" onclick="closeQuickView()"></div>
@@ -268,7 +241,7 @@
 
 
 
-  
+
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -346,7 +319,7 @@
     </div>
   </footer>
 
-  
+
   <!-- ================= SCRIPTS ================= -->
   <script src="../assets/javascript/navbar.js"></script>
   <script src="../assets/javascript/quick-view.js"></script>

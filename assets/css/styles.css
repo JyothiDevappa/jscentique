@@ -60,7 +60,13 @@ body {
   font-size: 18px;
   letter-spacing: 3px;
   color: #fff;
-  pointer-events: none;
+    cursor: pointer;
+}
+
+.nav-brand a {
+  text-decoration: none;
+  color: inherit;
+
 }
 
 /* RIGHT */
