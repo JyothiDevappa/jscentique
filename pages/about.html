@@ -1,218 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us – J SCENTIQUE</title>
 
 
-   <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../assets/css/responsive.css" />
 
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{
-      font-family:'Montserrat', sans-serif;
-      background:#0e0e0e;
-      color:#fff;
+    body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+
+
+    section {
+      padding: 120px 10%;
     }
 
-    section{
-      padding:120px 10%;
-    }
-
-    h1,h2{
-      font-family:'Playfair Display', serif;
-      font-weight:600;
+    h1,
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
     }
 
     /* ================= HERO ================= */
-    .about-hero{
-      height:90vh;
-      display:flex;
-      align-items:center;
+   .about-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  background-image: url("../assets/images/Beige Modern Fragrance Pitch Deck Presentation.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+
+    .about-hero span {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #d6b878;
+      /* luxury muted gold – visible on overlay */
     }
 
-    .about-hero span{
-      font-size:11px;
-      letter-spacing:4px;
-      color:#c8a96a;
+    .hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+    .about-hero h1 {
+      font-size: 52px;
+      margin: 18px 0;
+      color: #f4f4f4;
+      /* soft white, not harsh */
     }
 
-    .about-hero h1{
-      font-size:52px;
-      margin:18px 0;
-    }
-
-    .about-hero p{
-      max-width:560px;
-      color:#aaa;
-      line-height:1.8;
-      font-size:15px;
+    .about-hero p {
+      max-width: 560px;
+      color: #d0d0d0;
+      /* readable light grey */
+      line-height: 1.8;
+      font-size: 15px;
     }
 
     /* ================= GRID SECTIONS ================= */
-    .about-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:90px;
-      align-items:center;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: center;
     }
 
-    .about-grid img{
-      width:100%;
-      height:540px;
-      object-fit:cover;
+    .about-grid img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
     }
 
-    .about-text span{
-      font-size:11px;
-      letter-spacing:3px;
-      color:#c8a96a;
+    .about-text span {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #c8a96a;
     }
 
-    .about-text h2{
-      font-size:36px;
-      margin:16px 0;
+    .about-text h2 {
+      font-size: 36px;
+      margin: 16px 0;
     }
 
-    .about-text p{
-      color:#aaa;
-      line-height:1.8;
-      margin-bottom:14px;
-      font-size:14px;
+    .about-text p {
+      color: #aaa;
+      line-height: 1.8;
+      margin-bottom: 14px;
+      font-size: 14px;
     }
 
-    .alt-bg{
-      background:#111;
+    .alt-bg {
+      background: #111;
     }
 
     /* ================= VALUES ================= */
-    .values{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:40px;
-      text-align:center;
+    .values {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      text-align: center;
     }
 
-    .values h3{
-      font-size:14px;
-      letter-spacing:2px;
-      color:#c8a96a;
-      margin-bottom:8px;
+    .values h3 {
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #c8a96a;
+      margin-bottom: 8px;
     }
 
-    .values p{
-      font-size:13px;
-      color:#aaa;
-      line-height:1.6;
+    .values p {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.6;
     }
 
     /* ================= QUOTE ================= */
-    .brand-quote{
-      text-align:center;
-      max-width:800px;
-      margin:0 auto;
+    .brand-quote {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    .brand-quote p{
-      font-family:'Playfair Display', serif;
-      font-size:28px;
-      line-height:1.6;
-      color:#ddd;
+    .brand-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      line-height: 1.6;
+      color: #ddd;
     }
 
-    .brand-quote span{
-      display:block;
-      margin-top:20px;
-      font-size:12px;
-      letter-spacing:3px;
-      color:#c8a96a;
+    .brand-quote span {
+      display: block;
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #c8a96a;
+    }
+
+    .hero-dna {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .hero-dna div {
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      padding-left: 16px;
+    }
+
+    .hero-dna span {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #c8a96a;
+    }
+
+    .hero-dna p {
+      font-size: 13px;
+      color: #eee;
+      margin-top: 6px;
     }
 
 
+
+    
     /* ================= MOBILE RESPONSIVE ================= */
-@media (max-width: 768px){
+    @media (max-width: 768px) {
 
-  section{
-    padding:80px 6%;
-  }
-
-  /* HERO */
-  .about-hero{
-    height:auto;
-    padding-top:120px;
-    padding-bottom:80px;
-  }
-
-  .about-hero h1{
-    font-size:34px;
-    line-height:1.2;
-  }
-
-  .about-hero p{
-    font-size:14px;
-  }
-
-  /* GRID STACK */
-  .about-grid{
-    grid-template-columns:1fr;
-    gap:50px;
-  }
-
-  .about-grid img{
-    height:360px;
-  }
-
-  /* TEXT */
-  .about-text h2{
-    font-size:28px;
-  }
-
-  .about-text p{
-    font-size:13px;
-  }
-
-  /* VALUES */
-  .values{
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-  }
-
-  /* QUOTE */
-  .brand-quote p{
-    font-size:22px;
-  }
+    body {
+  min-height: 100vh;
+  background-size: cover;   /* IMPORTANT */
+  background-position: center top;
 }
 
-/* ================= SMALL PHONES ================= */
-@media (max-width: 480px){
 
-  section{
-    padding:50px 5%;
-  }
+      section {
+        padding: 80px 6%;
+      }
 
-  .about-hero h1{
-    font-size:30px;
-  }
+      
 
-  .values{
-    grid-template-columns:1fr;
-  }
-
-  .brand-quote p{
-    font-size:20px;
-  }
+      /* HERO */
+    .about-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 80px;
 }
+
+      .about-hero h1 {
+        font-size: 34px;
+        line-height: 1.2;
+      }
+
+      .about-hero p {
+        font-size: 14px;
+        margin-top: 40px;
+      }
+
+      /* GRID STACK */
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .about-grid img {
+        height: 360px;
+      }
+
+      /* TEXT */
+      .about-text h2 {
+        font-size: 28px;
+      }
+
+      .about-text p {
+        font-size: 13px;
+      }
+
+      /* VALUES */
+      .values {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      /* QUOTE */
+      .brand-quote p {
+        font-size: 22px;
+      }
+
+  
+  }
 
   </style>
 </head>
@@ -220,76 +267,84 @@
 <body>
 
 
-    <!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-  <div class="navbar-container">
 
-    <!-- LEFT -->
-    <div class="nav-left">
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
 
-      <a href="../index.html" class="nav-home" aria-label="Home">
-        <i class="fa-solid fa-house"></i>
-      </a>
-    </div>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="navbar-container">
 
-    <!-- CENTER BRAND -->
-    <div class="nav-brand">
-      J SCENTIQUE
-    </div>
+      <!-- LEFT -->
+      <div class="nav-left">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-    
-    <!-- RIGHT -->
-    <div class="nav-right">
-      <div class="nav-wishlist" onclick="window.location.href='pages/wishlist.html'">
-        <i class="fa-regular fa-heart"></i>
-        <span id="wishlistCount">0</span>
+        <a href="../index.html" class="nav-home" aria-label="Home">
+          <i class="fa-solid fa-house"></i>
+        </a>
       </div>
 
-      <div class="nav-cart" onclick="redirectCart()">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span id="cartCount">0</span>
+      <!-- CENTER BRAND -->
+      <div class="nav-brand">
+        <a href="../index.html">J SCENTIQUE</a>
       </div>
-    </div>
 
-  </div>
-</nav>
 
-<!-- OVERLAY -->
-<div class="menu-overlay" id="menuOverlay"></div>
-
-<!-- ========== SLIDE MENU (DESKTOP + MOBILE) ========== -->
-<div class="side-menu" id="sideMenu">
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../pages/best-seller.html">Best Seller</a></li>
-    <li><a href="../pages/new-arrivals.html">New Arrivals</a></li>
-    <li><a href="../pages/about.html">About Us</a></li>
-    <li><a href="../pages/contact.html">Contact Us</a></li>
-  </ul>
-
-   <div class="footer-socials">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      <!-- RIGHT -->
+      <div class="nav-right">
+        <div class="nav-wishlist" onclick="window.location.href='../pages/wishlist.html'">
+          <i class="fa-regular fa-heart"></i>
+          <span id="wishlistCount">0</span>
         </div>
 
- 
 
-  <div class="side-menu-footer">
-    jscentique.com
+        <a href="cart.html" class="nav-cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cartCount">0</span>
+        </a>
+
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- OVERLAY -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- ========== SLIDE MENU (DESKTOP + MOBILE) ========== -->
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/best-seller.html">Best Seller</a></li>
+      <li><a href="../pages/new-arrivals.html">New Arrivals</a></li>
+      <li><a href="../pages/about.html">About Us</a></li>
+      <li><a href="../pages/contact.html">Contact Us</a></li>
+    </ul>
+
+    <div class="footer-socials">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
+
+
+    <div class="side-menu-footer">
+      jscentique.com
+    </div>
   </div>
-</div>
   <!-- END OF NAVBAR -->
 
 
   <!-- ================= HERO ================= -->
   <section class="about-hero">
-    <div>
+
+    <div class="hero-inner">
+
+
       <span>ABOUT J SCENTIQUE</span>
       <h1>Fragrance Crafted With Purpose</h1>
       <p>
@@ -297,6 +352,24 @@
         refined scents that feel personal, expressive, and timeless.
         Every creation reflects balance, restraint, and quiet confidence.
       </p>
+
+      <div class="hero-dna">
+        <div>
+          <span>TOP</span>
+          <p>Bergamot</p>
+        </div>
+        <div>
+          <span>HEART</span>
+          <p>Jasmine</p>
+        </div>
+        <div>
+          <span>BASE</span>
+          <p>Amber Woods</p>
+        </div>
+      </div>
+
+    </div>
+
     </div>
   </section>
 
@@ -339,6 +412,9 @@
       </div>
 
       <img src="../assets/images/about-image-2.png" alt="Fragrance Ingredients">
+
+
+
     </div>
   </section>
 
@@ -379,7 +455,7 @@
 
 
 
-  
+
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -458,7 +534,14 @@
   </footer>
 
 
-    <script src="../assets/javascript/navbar.js"></script>
+  <script src="../assets/javascript/navbar.js"></script>
+  <script src="../assets/javascript/wishlist.js"></script>
+  <script src="../assets/javascript/buy-now.js"></script>
+  <script src="../assets/javascript/cart.js"></script>
+  <script src="../assets/javascript/checkout.js"></script>
+
+
 
 </body>
+
 </html>

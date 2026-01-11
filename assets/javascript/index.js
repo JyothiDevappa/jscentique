@@ -24,3 +24,22 @@
 
     setInterval(updateCountdown, 1000);
     updateCountdown();
+
+
+
+
+    // image section 
+  const section = document.getElementById("luxReveal");
+  const text = section.querySelector(".lux-text");
+
+  window.addEventListener("scroll", () => {
+    const rect = section.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const progress = 1 - Math.abs(rect.top) / windowHeight;
+
+    if (progress > 0 && progress <= 1) {
+      text.style.opacity = progress;
+      text.style.transform = `translateY(${60 - progress * 60}px)`;
+    }
+  });
